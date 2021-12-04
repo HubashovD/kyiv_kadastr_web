@@ -1,0 +1,119 @@
+@media (min-width: 1680px) {
+    #parcels_owner_using,
+    #parcels_using {
+        width: 1408px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1679px) {
+    #parcels_owner_using,
+    #parcels_using {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1279px) {
+    .small-header {
+        width: 864px !important;
+    }
+    #parcels_owner_using,
+    #parcels_using {
+        width: 80%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 480px) {
+    #parcels_owner_using,
+    #parcels_using {
+        width: 95%;
+    }
+    .usual-text p {
+        width: 85% !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #parcels_owner_using,
+    #parcels_using {
+        width: 95%;
+    }
+    .usual-text p {
+        width: 85% !important;
+    }
+    .custom-select {
+        width: 50vw;
+    }
+}
+
+.usual-text p {
+    line-height: 1.5em;
+    margin-bottom: 2.5em;
+    width: 50%;
+    padding: 0;
+    box-align: justify;
+    margin-left: 12.5vw;
+}
+
+.small-header {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    display: block;
+    font-family: e-UkraineLight;
+    line-height: 1.5em;
+    -webkit-margin-before: 1em;
+    margin-block-start: 1em;
+    -webkit-margin-after: 1em;
+    margin-block-end: 1em;
+    -webkit-margin-start: 0px;
+    margin-inline-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-inline-end: 0px;
+    padding: 0;
+    box-align: justify;
+    margin-left: 12.5vw;
+    margin-right: 20%;
+    margin-top: 50px;
+    position: relative;
+    width: 67%;
+    max-width: 50%;
+}
+
+#parcels_using {
+    position: relative;
+    display: block !important;
+    max-width: 99vw !important;
+    margin-left: 2.0625vw;
+}
+
+#parcels_using .tooltip {
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#parcels_owner_using {
+    position: relative;
+    margin-left: 2.0625vw;
+}
+
+#parcels_owner_using .tooltip {
+    position: absolute;
+    pointer-events: none;
+}
+
+.custom-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    margin: 0 5px 0 0;
+    max-width: 500px;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #000000;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 12.5vw;
+}
