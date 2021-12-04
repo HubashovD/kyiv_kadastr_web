@@ -51,7 +51,7 @@
         // ----------------
         // Create a tooltip
         // ----------------
-        var tooltip = d3.select("#codex_articles")
+        var tooltip = d3.select("#parcels_using")
             .append("div")
             .style("opacity", 0)
             .attr("class", "tooltip")

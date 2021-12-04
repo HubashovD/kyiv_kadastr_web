@@ -57,7 +57,7 @@
                 .attr("transform", "translate(-10,0)")
                 .style("text-anchor", "end")
 
-            d3.select("#activitySphereOnOffenseMomentName").select("svg")
+            d3.select("#parcels_owner_using").select("svg")
                 .attr("height", 25 * filtered.length + 50)
 
 
@@ -68,7 +68,7 @@
             // ----------------
             // Create a tooltip
             // ----------------
-            var tooltip = d3.select("#activitySphereOnOffenseMomentName")
+            var tooltip = d3.select("#parcels_owner_using")
                 .append("div")
                 .style("opacity", 0)
                 .attr("class", "tooltip")
@@ -165,5 +165,5 @@
 
         })
 
-        update("Депутат місцевої ради")
+        update("Державна власність")
     })
