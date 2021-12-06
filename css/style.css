@@ -117,3 +117,16 @@
     vertical-align: middle;
     margin-left: 12.5vw;
 }
+
+.map_button {
+    padding: 9px 11px 7px 11px;
+    font: 16px nyt-franklin, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    margin: 0 0.25em; }
+  
+.map_button:hover {
+  background: lightgrey; }

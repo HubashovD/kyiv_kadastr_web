@@ -1,11 +1,11 @@
 /**
  * Created by yevheniia on 09.06.20.
  */
- var default_zoom_u = window.innerWidth > 800 ? 5 : 4;
- var default_zoom_k = window.innerWidth > 800 ? 9 : 8;
+ var default_zoom_u = window.innerWidth > 800 ? 14 : 24;
+ var default_zoom_k = window.innerWidth > 800 ? 24 : 1;
  
  var stops_values = [
-     [-3, 'white'],
+     ["Приватна власність", 'white'],
      [-1, '#d3d3d3'],
      [0, '#ffffff'],
      [1, '#ffffb2'],
@@ -24,15 +24,14 @@
      maxZoom: default_zoom_u + 2,
      hash: false,
      tap: false,
-     attributionControl: false,
-     style: 'https://raw.githubusercontent.com/texty/covid_schools_map/master/dark_matter.json',
-     center: [31.5, 48.5],
+     attributionControl: true,
+     style: 'mapbox://styles/mapbox/dark-v10',
+     center: [30.5, 50.4],
      zoom: default_zoom_u // starting zoom
  });
  
  
 
- map.scrollZoom.disable();
  
  
  Promise.all([
@@ -59,19 +58,19 @@
      map.on('load', function () {
  
          //векторні тайли
-         map.addSource('schools', {
+         map.addSource('parcels_4326', {
              type: 'vector',
-             tiles: ["http://localhost:7802//{z}/{x}/{y}.pbf"]
+             tiles: ["https://hubashovd.github.io/kyiv_kadastr_web/tree/main/vector_tiles/parcels/{z}/{x}/{y}.pbf"] 
          });
  
  
          function redrawUkraineMap(choropleth_column) {
              map.addLayer({
-                 "id": "parcels",
+                 "id": "parcels_4326",
                  'type': 'fill',
                  'minzoom': 4,
                  'maxzoom': 10,
-                 'source': "parcels",
+                 'source': "parcels_4326",
                  "source-layer": "parcels_4326",
                  "paint": {
                      'fill-color': {
@@ -90,22 +89,22 @@
              }, firstSymbolId);
          }
  
-         map.on('click', 'schools_data', function(e) {
+         map.on('click', 'parcels_4326', function(e) {
             map.getCanvas().style.cursor = 'pointer';
             new mapboxgl.Popup()
                  .setLngLat(e.lngLat)
-                 .setHTML(e.features[0].properties.MAP_cleaned_registration_region)
+                 .setHTML(e.features[0].properties.ownership)
                  .addTo(map);
          });
  
-         redrawUkraineMap('MAP_cleaned_infections1000');
+         redrawUkraineMap('parcels_4326');
  
          /* перемикаємо шари  карти */
          d3.select("#ukraine-switch-buttons").selectAll(".map_button").on("click", function() {
              let selected_layer = d3.select(this).attr("value");
              d3.select(this.parentNode).selectAll(".map_button").classed("active", false);
              d3.select(this).classed("active", true);
-             map.removeLayer('schools_data');
+             map.removeLayer('parcels_4326');
              redrawUkraineMap(selected_layer);
          });
  

@@ -19,8 +19,6 @@
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
-        <link rel='stylesheet' href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" />
-        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.css'  type='text/css'/>
         <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -28,15 +26,19 @@
         <link rel="stylesheet" href="css/styles.css"/>
     
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-        <script type="text/javascript" src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 </head>
     
 <body>
 
 
-    <div id='map' style='width: 400px; height: 300px;'></div>
+    <div id='map' style='width: 1000px; height: 800px;'></div>
+    <div class="buttons" id="ukraine-switch-buttons">
+        <div class="map_button" value="parcels_4326">школи на 100 учнів</div>
+        <div class="map_button" value="parcels_4326">школи на 200 учнів</div>
+        <div class="map_button" value="parcels_4326">школи на 500 учнів</div>
+        <div class="map_button active" value="parcels_4326">школи на 1000 учнів</div>
+    </div>
     <div class="usual-text">
         <p>Тут текст</p>
     </div>
