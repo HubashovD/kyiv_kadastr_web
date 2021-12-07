@@ -32,7 +32,7 @@
             "id": "background",
             "type": "background",
             "layout": { "visibility": "visible" },
-            "paint": { "background-color": "rgba(255, 255, 255, 1)" }
+            "paint": { "background-color": "rgb(26,37,54)" }
         },
         {
             "id": "water",
@@ -72,10 +72,13 @@
             "layout": { "visibility": "none" },
             "paint": {
                 "fill-color": "hsl(0, 1%, 2%)",
-                "fill-opacity": { "base": 1, "stops": [
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
                         [0, 1],
                         [8, 0.5]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -103,11 +106,14 @@
             "layout": { "visibility": "none" },
             "paint": {
                 "fill-color": "rgb(32,32,32)",
-                "fill-opacity": { "base": 0.3, "stops": [
+                "fill-opacity": {
+                    "base": 0.3,
+                    "stops": [
                         [8, 0],
                         [10, 0.8],
                         [13, 0.4]
-                    ] },
+                    ]
+                },
                 "fill-pattern": "wood-pattern",
                 "fill-translate": [0, 0]
             }
@@ -182,10 +188,13 @@
             "paint": {
                 "line-color": "#181818",
                 "line-opacity": 1,
-                "line-width": { "base": 1.55, "stops": [
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
                         [13, 1.8],
                         [20, 20]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -204,10 +213,13 @@
             "paint": {
                 "line-color": "rgba(60,60,60,0.8)",
                 "line-opacity": 1,
-                "line-width": { "base": 1.5, "stops": [
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
                         [11, 5],
                         [17, 55]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -243,10 +255,13 @@
             "paint": {
                 "line-color": "#000",
                 "line-opacity": 1,
-                "line-width": { "base": 1.5, "stops": [
+                "line-width": {
+                    "base": 1.5,
+                    "stops": [
                         [11, 4],
                         [17, 50]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -277,10 +292,13 @@
             },
             "paint": {
                 "line-color": "rgb(12,12,12)",
-                "line-width": { "base": 1.2, "stops": [
+                "line-width": {
+                    "base": 1.2,
+                    "stops": [
                         [15, 1],
                         [17, 4]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -301,10 +319,13 @@
                 "line-color": "rgb(27 ,27 ,29)",
                 "line-dasharray": [1.5, 1.5],
                 "line-opacity": 0.9,
-                "line-width": { "base": 1.2, "stops": [
+                "line-width": {
+                    "base": 1.2,
+                    "stops": [
                         [13, 1],
                         [20, 10]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -326,10 +347,13 @@
             "paint": {
                 "line-color": "#181818",
                 "line-opacity": 0.9,
-                "line-width": { "base": 1.55, "stops": [
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
                         [13, 1.8],
                         [20, 20]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -351,10 +375,13 @@
             "paint": {
                 "line-color": "rgba(60,60,60,0.8)",
                 "line-dasharray": [12, 0],
-                "line-width": { "base": 1.3, "stops": [
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
                         [10, 3],
                         [20, 23]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -375,10 +402,13 @@
             },
             "paint": {
                 "line-color": "hsl(0, 0%, 7%)",
-                "line-width": { "base": 1.3, "stops": [
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
                         [10, 2],
                         [20, 20]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -400,10 +430,12 @@
             },
             "paint": {
                 "line-color": "#2a2a2a",
-                "line-width": { "stops": [
+                "line-width": {
+                    "stops": [
                         [6, 0],
                         [8, 2]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -426,11 +458,14 @@
                 "line-color": "rgba(60,60,60,0.8)",
                 "line-dasharray": [2, 0],
                 "line-opacity": 1,
-                "line-width": { "base": 1.4, "stops": [
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
                         [5.8, 0],
                         [6, 3],
                         [20, 40]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -457,11 +492,14 @@
                         [6, "#000"]
                     ]
                 },
-                "line-width": { "base": 1.4, "stops": [
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
                         [4, 2],
                         [6, 1.3],
                         [20, 30]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -478,10 +516,12 @@
                 "icon-padding": 2,
                 "icon-rotation-alignment": "map",
                 "icon-rotate": 0,
-                "icon-size": { "stops": [
+                "icon-size": {
+                    "stops": [
                         [15, 0.5],
                         [19, 1]
-                    ] },
+                    ]
+                },
                 "visibility": "none"
             },
             "paint": { "icon-opacity": 0.5 }
@@ -500,10 +540,12 @@
                 "icon-padding": 2,
                 "icon-rotation-alignment": "map",
                 "icon-rotate": 180,
-                "icon-size": { "stops": [
+                "icon-size": {
+                    "stops": [
                         [15, 0.5],
                         [19, 1]
-                    ] },
+                    ]
+                },
                 "visibility": "none"
             },
             "paint": { "icon-opacity": 0.5 }
@@ -526,10 +568,13 @@
             },
             "paint": {
                 "line-color": "#181818",
-                "line-width": { "base": 1.4, "stops": [
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
                         [4, 2],
                         [6, 1.3]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -619,10 +664,13 @@
             "layout": { "line-join": "round", "visibility": "none" },
             "paint": {
                 "line-color": "rgb(35,35,35)",
-                "line-width": { "base": 1.3, "stops": [
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
                         [16, 3],
                         [20, 7]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -641,10 +689,13 @@
             "paint": {
                 "line-color": "rgb(12,12,12)",
                 "line-dasharray": [3, 3],
-                "line-width": { "base": 1.3, "stops": [
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
                         [16, 2],
                         [20, 6]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -716,10 +767,13 @@
                 "line-color": "rgba(247, 239, 239, 1)",
                 "line-dasharray": [2, 2],
                 "line-opacity": 1,
-                "line-width": { "base": 1.3, "stops": [
+                "line-width": {
+                    "base": 1.3,
+                    "stops": [
                         [3, 1],
                         [22, 15]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -736,16 +790,22 @@
                 "visibility": "none"
             },
             "paint": {
-                "line-blur": { "base": 1, "stops": [
+                "line-blur": {
+                    "base": 1,
+                    "stops": [
                         [0, 0.4],
                         [22, 4]
-                    ] },
+                    ]
+                },
                 "line-color": "rgba(255, 255, 255, 1)",
                 "line-opacity": 1,
-                "line-width": { "base": 1.1, "stops": [
+                "line-width": {
+                    "base": 1.1,
+                    "stops": [
                         [3, 1],
                         [22, 20]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -762,16 +822,22 @@
                 "visibility": "none"
             },
             "paint": {
-                "line-blur": { "base": 1, "stops": [
+                "line-blur": {
+                    "base": 1,
+                    "stops": [
                         [0, 0.4],
                         [22, 4]
-                    ] },
+                    ]
+                },
                 "line-color": "rgba(206, 74, 74, 1)",
                 "line-opacity": 1,
-                "line-width": { "base": 1.1, "stops": [
+                "line-width": {
+                    "base": 1.1,
+                    "stops": [
                         [3, 1],
                         [22, 20]
-                    ] }
+                    ]
+                }
             }
         },
         {
@@ -870,15 +936,21 @@
             "minzoom": 7,
             "maxzoom": 15,
             "layout": {
-                "icon-image": { "base": 1, "stops": [
+                "icon-image": {
+                    "base": 1,
+                    "stops": [
                         [0, "circle-11"],
                         [9, ""]
-                    ] },
+                    ]
+                },
                 "icon-size": 0.4,
-                "text-anchor": { "base": 1, "stops": [
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
                         [0, "left"],
                         [8, "center"]
-                    ] },
+                    ]
+                },
                 "text-field": "{name:uk}",
                 "text-font": ["Metropolis Regular", "Noto Sans Regular"],
                 "text-justify": "left",
@@ -943,15 +1015,21 @@
                 ]
             ],
             "layout": {
-                "icon-image": { "base": 1, "stops": [
+                "icon-image": {
+                    "base": 1,
+                    "stops": [
                         [0, "circle-11"],
                         [9, ""]
-                    ] },
+                    ]
+                },
                 "icon-size": 0.4,
-                "text-anchor": { "base": 1, "stops": [
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
                         [0, "left"],
                         [8, "center"]
-                    ] },
+                    ]
+                },
                 "text-field": "{name:uk}",
                 "text-font": ["Metropolis Regular", "Noto Sans Regular"],
                 "text-justify": "left",
@@ -983,15 +1061,21 @@
                 ["==", "name", "Київ"]
             ],
             "layout": {
-                "icon-image": { "base": 1, "stops": [
+                "icon-image": {
+                    "base": 1,
+                    "stops": [
                         [0, "circle-11"],
                         [9, ""]
-                    ] },
+                    ]
+                },
                 "icon-size": 0.4,
-                "text-anchor": { "base": 1, "stops": [
+                "text-anchor": {
+                    "base": 1,
+                    "stops": [
                         [0, "left"],
                         [8, "center"]
-                    ] },
+                    ]
+                },
                 "text-field": "{name:uk}",
                 "text-font": ["Metropolis Regular", "Noto Sans Regular"],
                 "text-justify": "left",
@@ -1048,10 +1132,13 @@
             "layout": {
                 "text-field": "{name:uk}",
                 "text-font": ["Metropolis Light Italic", "Noto Sans Italic"],
-                "text-size": { "base": 1, "stops": [
+                "text-size": {
+                    "base": 1,
+                    "stops": [
                         [0, 9],
                         [1, 11]
-                    ] },
+                    ]
+                },
                 "text-transform": "uppercase",
                 "visibility": "none"
             },
@@ -1077,10 +1164,13 @@
             "layout": {
                 "text-field": "{name:uk}",
                 "text-font": ["Metropolis Regular", "Noto Sans Regular"],
-                "text-size": { "base": 1, "stops": [
+                "text-size": {
+                    "base": 1,
+                    "stops": [
                         [0, 10],
                         [6, 12]
-                    ] },
+                    ]
+                },
                 "text-transform": "uppercase",
                 "visibility": "none"
             },
@@ -1108,11 +1198,14 @@
                 "text-anchor": "center",
                 "text-field": "{name:uk}",
                 "text-font": ["Metropolis Regular", "Noto Sans Regular"],
-                "text-size": { "base": 1.4, "stops": [
+                "text-size": {
+                    "base": 1.4,
+                    "stops": [
                         [0, 10],
                         [3, 12],
                         [4, 14]
-                    ] },
+                    ]
+                },
                 "text-transform": "uppercase",
                 "visibility": "none",
                 "symbol-placement": "point"
