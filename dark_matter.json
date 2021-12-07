@@ -91,7 +91,7 @@
                 "all", ["==", "$type", "Polygon"],
                 ["==", "class", "residential"]
             ],
-            "layout": { "visibility": "none" },
+            "layout": { "visibility": "visible" },
             "paint": { "fill-color": "hsl(0, 2%, 5%)", "fill-opacity": 0.4 }
         },
         {
@@ -103,7 +103,7 @@
             "filter": ["all", ["==", "$type", "Polygon"],
                 ["==", "class", "wood"]
             ],
-            "layout": { "visibility": "none" },
+            "layout": { "visibility": "visible" },
             "paint": {
                 "fill-color": "rgb(32,32,32)",
                 "fill-opacity": {

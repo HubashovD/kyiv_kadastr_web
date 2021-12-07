@@ -78,7 +78,14 @@ map.on('load', function() {
         }
     });
 
-    redrawUkraineMap();
+    /* перемикаємо шари  карти */
+    d3.select("#ukraine-switch-buttons").selectAll(".map_button").on("click", function() {
+        let selected_layer = d3.select(this).attr("value");
+        d3.select(this.parentNode).selectAll(".map_button").classed("active", false);
+        d3.select(this).classed("active", true);
+        map.removeLayer('schools_data');
+        redrawUkraineMap(selected_layer);
+    });
 
     var nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'top-left');
