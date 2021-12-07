@@ -163,7 +163,7 @@
             "type": "fill",
             "source": "openmaptiles",
             "source-layer": "building",
-            "minzoom": 12,
+            "minzoom": 14,
             "filter": ["==", "$type", "Polygon"],
             "layout": { "visibility": "visible" },
             "paint": {
@@ -288,7 +288,7 @@
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": "rgb(12,12,12)",
@@ -342,7 +342,7 @@
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": "#181818",
@@ -398,7 +398,7 @@
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": "hsl(0, 0%, 7%)",
@@ -452,7 +452,7 @@
             "layout": {
                 "line-cap": "butt",
                 "line-join": "miter",
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": "rgba(60,60,60,0.8)",
@@ -482,7 +482,7 @@
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": {
@@ -522,7 +522,7 @@
                         [19, 1]
                     ]
                 },
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": { "icon-opacity": 0.5 }
         },
@@ -546,7 +546,7 @@
                         [19, 1]
                     ]
                 },
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": { "icon-opacity": 0.5 }
         },
@@ -661,7 +661,7 @@
                 ["==", "class", "rail"],
                 ["!has", "service"]
             ],
-            "layout": { "line-join": "round", "visibility": "none" },
+            "layout": { "line-join": "round", "visibility": "visible" },
             "paint": {
                 "line-color": "rgb(35,35,35)",
                 "line-width": {
