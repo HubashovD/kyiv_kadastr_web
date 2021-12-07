@@ -31,8 +31,8 @@
     "layers": [{
             "id": "background",
             "type": "background",
-            "layout": { "visibility": "visible" },
-            "paint": { "background-color": "rgb(26,37,54)" }
+            "layout": { "visibility": "none" },
+            "paint": { "background-color": "rgb(255,255,255)" }
         },
         {
             "id": "water",
@@ -165,7 +165,7 @@
             "source-layer": "building",
             "minzoom": 14,
             "filter": ["==", "$type", "Polygon"],
-            "layout": { "visibility": "visible" },
+            "layout": { "visibility": "none" },
             "paint": {
                 "fill-antialias": true,
                 "fill-color": "rgb(10,10,10)",

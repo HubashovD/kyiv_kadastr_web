@@ -1,10 +1,10 @@
-var default_zoom_u = window.innerWidth > 800 ? 10 : 10;
+var default_zoom_u = window.innerWidth > 800 ? 11 : 11;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHJpbWFjdXMxODIiLCJhIjoiWGQ5TFJuayJ9.6sQHpjf_UDLXtEsz8MnjXw';
 
 var map = new mapboxgl.Map({
     container: 'map',
-    minZoom: 10,
+    minZoom: 11,
     maxZoom: 14,
     hash: false,
     tap: false,
@@ -36,7 +36,7 @@ map.on('load', function() {
         map.addLayer({
             "id": "schools_data",
             'type': 'fill',
-            'minzoom': 10,
+            'minzoom': 11,
             'maxzoom': 14,
             'source': "schools",
             "source-layer": "parcels_4326",
@@ -53,6 +53,7 @@ map.on('load', function() {
                     /* other */
                     '#ccc'
                 ],
+                'fill-opacity': 1
 
                 /*,
                                 'fill-outline-color': [
@@ -67,7 +68,7 @@ map.on('load', function() {
     var change_op = function(value) {
         console.log(value)
         map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'category'],
-            value, 1.0, 0
+            value, 1.0, 0.2
         ]);
     }
 
@@ -89,13 +90,30 @@ map.on('load', function() {
     });
 
 
-    d3.select("#change_op").on("click", function() {
+    /*d3.select("#change_op").on("click", function() {
         console.log("Hello!")
         let selected_value = d3.select(this).attr("value");
         change_op(selected_value)
+    })*/
+
+    d3.select("#change_op").on("click", function() {
+        console.log("All_objects")
+        map.removeLayer('schools_data');
+        redrawUkraineMap()
     })
 
+    d3.select("#ukraine-switch-buttons").selectAll(".map_button").on("click", function() {
+        let selected_value = d3.select(this).attr("value");
+        d3.select(this.parentNode).selectAll(".map_button").classed("active", false);
+        d3.select(this).classed("active", true);
+        change_op(selected_value)
+    });
+
+
+
+
     redrawUkraineMap()
+
     var nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'top-left');
 

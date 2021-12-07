@@ -126,7 +126,44 @@
     display: inline-block;
     cursor: pointer;
     background: #fff;
-    margin: 0 0.25em; }
-  
+    margin: 0 0.25em;
+}
+
 .map_button:hover {
-  background: lightgrey; }
+    background: lightgrey;
+}
+
+#change_op {
+    padding: 9px 11px 7px 11px;
+    font: 16px nyt-franklin, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    margin: 0 0.25em;
+}
+
+#change_op:hover {
+    background: lightgrey;
+}
+
+.map_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: 100px;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
+
+.box2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
