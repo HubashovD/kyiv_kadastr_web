@@ -99,11 +99,11 @@
             .on("mousemove", moveTooltip)
             .on("mouseleave", hideTooltip)
             .merge(u) // get the already existing elements as well
-            .transition() // and apply changes to all of them
-            .duration(1000)
             .attr("x", 0)
             .attr("y", function(d) { return y(d.category); })
             .attr("height", 20)
+            .transition() // and apply changes to all of them
+            .duration(1000)
             .attr("width", function(d) { return x(d.area); })
             .attr("fill", "#4562AB")
             .attr("rx", 6)
@@ -125,11 +125,13 @@
             .append("text")
             .attr("class", "bar-labels")
             .merge(label)
-            .transition() // and apply changes to all of them
-            .duration(1000)
             .attr("x", function(d) { return x(d.area) + 2; })
             .attr("y", function(d) { return y(d.category) + 15; })
-            .text(function(d) { return d.area; });
+            .text(function(d) { return d.area; })
+            .style("opacity", 0)
+            .transition() // and apply changes to all of them
+            .duration(1500)
+            .style("opacity", 1)
 
         label
             .exit()
