@@ -126,7 +126,7 @@
             "filter": ["all", ["==", "$type", "Polygon"],
                 ["==", "class", "park"]
             ],
-            "layout": { "visibility": "none" },
+            "layout": { "visibility": "visible" },
             "paint": { "fill-color": "rgb(32,32,32)" }
         },
         {
@@ -135,7 +135,7 @@
             "source": "openmaptiles",
             "source-layer": "waterway",
             "filter": ["==", "$type", "LineString"],
-            "layout": { "visibility": "none" },
+            "layout": { "visibility": "visible" },
             "paint": { "line-color": "rgb(27 ,27 ,29)" }
         },
         {
@@ -165,7 +165,7 @@
             "source-layer": "building",
             "minzoom": 12,
             "filter": ["==", "$type", "Polygon"],
-            "layout": { "visibility": "none" },
+            "layout": { "visibility": "visible" },
             "paint": {
                 "fill-antialias": true,
                 "fill-color": "rgb(10,10,10)",
@@ -313,7 +313,7 @@
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "none"
+                "visibility": "visible"
             },
             "paint": {
                 "line-color": "rgb(27 ,27 ,29)",
