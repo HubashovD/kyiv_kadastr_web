@@ -150,8 +150,8 @@
 
 .map_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 100px;
 }
 
@@ -165,5 +165,24 @@
 .box2 {
     grid-column-start: 2;
     grid-row-start: 1;
-    grid-row-end: 10;
+    grid-row-end: 2;
+}
+
+.container .how-to-section-wrapper {
+    max-width: 1680px;
+    margin-left: 12.5vw;
+}
+
+.container .how-to-section-wrapper {
+    margin: 0px auto 0px auto;
+    align-self: center;
+}
+
+.how-to-bar .how-to-border {
+    max-width: 80vw;
+    margin-left: 2em !important;
+}
+
+.how-to-description {
+    line-height: 1.5em;
 }

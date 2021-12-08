@@ -23,9 +23,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 
 <body>
@@ -38,23 +42,59 @@
         </div>
 
         <div class="box2">
-            <div class="buttons" id="ukraine-switch-buttons">
-                <div id="change_op" value="schools_data">Відобразити все</div>
-                <div class="map_button" value="Землі лісогосподарського призначення">Землі лісогосподарського призначення</div>
-                <div class="map_button" value="Землі житлової та громадської забудови">Землі житлової та громадської забудови</div>
-                <div class="map_button" value="Землі промисловості, транспорту, зв’язку, енергетики, оборони та іншого призначення">Землі промисловості, транспорту, зв’язку, енергетики, оборони та іншого призначення</div>
-                <div class="map_button" value="Не визначено">Не визначено</div>
-                <div class="map_button" value="Землі природно-заповідного та іншого природоохоронного призначення">Землі природно-заповідного та іншого природоохоронного призначення</div>
-                <div class="map_button" value="Землі сільськогосподарського призначення">Землі сільськогосподарського призначення</div>
-                <div class="map_button" value="Землі водного фонду">Землі водного фонду</div>
-                <div class="map_button" value="Землі рекреаційного призначення">Землі рекреаційного призначення</div>
-                <div class="map_button" value="Землі історико-культурного призначення">Землі історико-культурного призначення</div>
-                <div class="map_button" value="Землі оздоровчого призначення">Землі оздоровчого призначення</div>
+            <div class="container">
+                <div class="how-to-section-wrapper">
+                    <div class="how-to-section is-closed" id="how-line">
+                        <div class="how-to-border">
+                            <div class="how-to-bar">
+                                <div class="pointer-icon">
+                                    <img src="pic/image 21.png">
+                                </div>
+                                <p class="how-to-title">Використання земель</p>
+                                <!-- <span></span> -->
+                            </div>
+                            <div class="how-to-description">
+                                <div class="buttons" id="ukraine-switch-buttons">
+                                    <ul>
+                                        <li>
+                                            <div id="change_op" value="schools_data">Відобразити все</div>
+                                        </li>
+                                        <div class="map_button" value="Землі лісогосподарського призначення">Землі лісогосподарського призначення</div>
+                                        <div class="map_button" value="Землі житлової та громадської забудови">Землі житлової та громадської забудови</div>
+                                        <div class="map_button" value="Землі промисловості, транспорту, зв’язку, енергетики, оборони та іншого призначення">Землі промисловості, транспорту, зв’язку, енергетики, оборони та іншого призначення</div>
+                                        <div class="map_button" value="Не визначено">Не визначено</div>
+                                        <div class="map_button" value="Землі природно-заповідного та іншого природоохоронного призначення">Землі природно-заповідного та іншого природоохоронного призначення</div>
+                                        <div class="map_button" value="Землі сільськогосподарського призначення">Землі сільськогосподарського призначення</div>
+                                        <div class="map_button" value="Землі водного фонду">Землі водного фонду</div>
+                                        <div class="map_button" value="Землі рекреаційного призначення">Землі рекреаційного призначення</div>
+                                        <div class="map_button" value="Землі історико-культурного призначення">Землі історико-культурного призначення</div>
+                                        <div class="map_button" value="Землі оздоровчого призначення">Землі оздоровчого призначення</div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="box3">
-            <div class="buttons" id="rent-switch-buttons">
-                <div class="map_button" value='Публічне акціонерне товариство "КИЇВЕНЕРГО"'>Публічне акціонерне товариство "КИЇВЕНЕРГО"</div>
+            <div class="container">
+                <div class="how-to-section-wrapper">
+                    <div class="how-to-section is-closed" id="how-line">
+                        <div class="how-to-border">
+                            <div class="how-to-bar">
+                                <div class="pointer-icon">
+                                    <img src="pic/image 21.png">
+                                </div>
+                                <p class="how-to-title">ТОП 10 орендарів земельних ділянок</p>
+                                <!-- <span></span> -->
+                            </div>
+                            <div class="how-to-description">
+                                <div class="buttons" id="rent-switch-buttons">
+                                    <div class="map_button" value='Публічне акціонерне товариство "КИЇВЕНЕРГО"'>Публічне акціонерне товариство "КИЇВЕНЕРГО"</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -79,6 +119,22 @@
     <script src="scripts/parcels_owner_using.js"></script>
     <script src="scripts/map.js"></script>
     <script src="scripts/rent.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("how-to-bar");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
