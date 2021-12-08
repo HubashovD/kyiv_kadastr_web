@@ -32,13 +32,15 @@ d3.csv("data/parcels_owner_using.csv").then(function(data) {
         .attr("value", function(d) { return d; }); // corresponding value returned by the button
 
     function update(f) {
-        var filtered = data.filter(function(d) { return d.ownership === f })
+
+        var filtered = data.filter(function(d) { return d.ownership === f || d.category === f })
+        console.log(filtered)
 
         // stratify the data: reformatting for d3.js
-        var root = d3.stratify(filtered)
-            .id(function(d) { return d.ownership; }) // Name of the entity (column name is name in csv)
-            .parentId(function(d) { return d.category; }) // Name of the parent (column name is parent in csv)
-            (data);
+        var root = d3.stratify()
+            .id(function(d) { return d.category; }) // Name of the entity (column name is name in csv)
+            .parentId(function(d) { return d.ownership; }) // Name of the parent (column name is parent in csv)
+            (filtered);
         root.sum(function(d) { return +d.area }) // Compute the numeric value for each entity
 
         // Then d3.treemap computes the position of each element of the hierarchy
@@ -80,6 +82,7 @@ d3.csv("data/parcels_owner_using.csv").then(function(data) {
         // recover the option that has been chosen
         var selectedOption = d3.select(this).property("value")
             // run the updateChart function with this selected option
+        console.log(selectedOption)
         update(selectedOption)
 
     })
