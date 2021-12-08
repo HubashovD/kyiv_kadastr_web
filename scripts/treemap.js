@@ -1,22 +1,41 @@
-(function() { // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 10, bottom: 10, left: 10 },
-        width = 445 - margin.left - margin.right,
-        height = 445 - margin.top - margin.bottom;
+// set the dimensions and margins of the graph
+var margin = { top: 10, right: 10, bottom: 10, left: 10 },
+    width = 445 - margin.left - margin.right,
+    height = 445 - margin.top - margin.bottom;
 
-    // append the svg object to the body of the page
-    var svg = d3.select("#tree_map")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+// append the svg object to the body of the page
+var svg = d3.select("#tree_map")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
 
-    // Read data
-    d3.csv("data/parcels_owner_using.csv", function(data) {
+// Read data
+d3.csv("data/parcels_owner_using.csv").then(function(data) {
+
+    data.forEach(function(d) {
+        d.area = +d.area;
+    });
+
+    // List of groups (here I have one group per column)
+    var allGroup = d3.map(data, function(d) { return (d.ownership) }).keys()
+
+    // add the options to the button
+    d3.select("#selectButton")
+        .selectAll('myOptions')
+        .data(allGroup)
+        .enter()
+        .append('option')
+        .text(function(d) { return d; }) // text showed in the menu
+        .attr("value", function(d) { return d; }); // corresponding value returned by the button
+
+    function update(f) {
+        var filtered = data.filter(function(d) { return d.ownership === f })
 
         // stratify the data: reformatting for d3.js
-        var root = d3.stratify()
+        var root = d3.stratify(filtered)
             .id(function(d) { return d.ownership; }) // Name of the entity (column name is name in csv)
             .parentId(function(d) { return d.category; }) // Name of the parent (column name is parent in csv)
             (data);
@@ -54,5 +73,15 @@
             .text(function(d) { return d.data.ownership })
             .attr("font-size", "15px")
             .attr("fill", "white")
+    }
+
+    // When the button is changed, run the updateChart function
+    d3.select("#selectButton").on("change", function(d) {
+        // recover the option that has been chosen
+        var selectedOption = d3.select(this).property("value")
+            // run the updateChart function with this selected option
+        update(selectedOption)
+
     })
-})();
+    update("Державна власність")
+})
