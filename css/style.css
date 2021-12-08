@@ -3,12 +3,21 @@
     #parcels_using {
         width: 1408px;
     }
+    #map {
+        width: 60vw;
+    }
+    .how-to-section-wrapper {
+        width: 20vw;
+    }
 }
 
 @media (min-width: 1280px) and (max-width: 1679px) {
     #parcels_owner_using,
     #parcels_using {
         width: 80%;
+    }
+    #map {
+        width: 60vw;
     }
 }
 
@@ -20,6 +29,9 @@
     #parcels_using {
         width: 80%;
     }
+    .map_grid {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 480px) {
@@ -29,6 +41,12 @@
     }
     .usual-text p {
         width: 85% !important;
+    }
+    .map_grid {
+        display: flex !important;
+    }
+    #map {
+        width: 99vw;
     }
 }
 
@@ -42,6 +60,12 @@
     }
     .custom-select {
         width: 50vw;
+    }
+    .map_grid {
+        display: flex !important;
+    }
+    #map {
+        width: 99vw;
     }
 }
 
@@ -122,6 +146,11 @@
     margin-left: 12.5vw;
 }
 
+#map {
+    width: 60vw;
+    height: 800px;
+}
+
 .map_button {
     padding: 9px 11px 7px 11px;
     font: 16px nyt-franklin, sans-serif;
@@ -154,7 +183,7 @@
 
 .map_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3fr, 1fr);
     grid-auto-rows: 100px;
 }
 
@@ -174,6 +203,7 @@
 .container .how-to-section-wrapper {
     max-width: 1680px;
     margin-left: 12.5vw;
+    width: 24vw;
 }
 
 .container .how-to-section-wrapper {
@@ -189,8 +219,6 @@
 .how-to-description {
     line-height: 1.5em;
 }
-
-.buttons div {}
 
 #legend {
     display: grid;

@@ -41,8 +41,6 @@ input::-webkit-calendar-picker-indicator {
 .container .about-project,
 .container .big-stats,
 .container .section-block,
-.container .hospital-stats-container,
-.container .doctor-stats-container,
 .container .header-line-chart,
 .container .line-chart-container,
 .container .treemap-wrapper,
@@ -62,7 +60,6 @@ input::-webkit-calendar-picker-indicator {
     .container .doctor-stats-container,
     .container .header-line-chart,
     .container .line-chart-container,
-    .container .how-to-section-wrapper,
     .container .treemap-wrapper,
     .container .charity-table-container {
         width: 1408px;
@@ -81,7 +78,6 @@ input::-webkit-calendar-picker-indicator {
     .container .doctor-stats-container,
     .container .header-line-chart,
     .container .line-chart-container,
-    .container .how-to-section-wrapper,
     .container .treemap-wrapper,
     .container .charity-table-container {
         width: 1120px;

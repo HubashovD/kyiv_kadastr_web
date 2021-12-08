@@ -1,11 +1,11 @@
-var default_zoom_u = window.innerWidth > 800 ? 11 : 11;
+var default_zoom_u = window.innerWidth > 800 ? 11 : 14;
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHJpbWFjdXMxODIiLCJhIjoiWGQ5TFJuayJ9.6sQHpjf_UDLXtEsz8MnjXw';
 
 var map = new mapboxgl.Map({
     container: 'map',
     minZoom: 11,
-    maxZoom: 14,
+    maxZoom: 16,
     hash: false,
     tap: false,
     attributionControl: false,
@@ -37,7 +37,7 @@ map.on('load', function() {
             "id": "schools_data",
             'type': 'fill',
             'minzoom': 11,
-            'maxzoom': 14,
+            'maxzoom': 16,
             'source': "schools",
             "source-layer": "parcels_4326",
             "paint": {
@@ -91,7 +91,7 @@ map.on('load', function() {
         if (map.getZoom() > 12) {
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML(e.features[0].properties.ownership + " " + e.features[0].properties.cadnum + "\n" + e.features[0].properties.category + "\n")
+                .setHTML("<b>" + e.features[0].properties.ownership + "</b>" + "<br>" + e.features[0].properties.cadnum + "<br>" + e.features[0].properties.category + "<br><b>" + e.features[0].properties.area + " га")
                 .addTo(map);
         }
     });
