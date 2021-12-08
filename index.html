@@ -10,8 +10,8 @@
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-
-    <script src="lib/d3v5_min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!--<script src="lib/d3v5_min.js"></script> -->
     <script src="lib/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/leaflet.css">
@@ -99,7 +99,7 @@
         </div>
     </div>
 
-
+    <div id="tree_map"></div>
 
     <div class="usual-text">
         <p>Тут текст</p>
@@ -115,10 +115,12 @@
 
     <div id="rent"></div>
 
-    <script src="scripts/parcels_using.js"></script>
-    <script src="scripts/parcels_owner_using.js"></script>
-    <script src="scripts/map.js"></script>
+    <!--<script src="scripts/parcels_using.js"></script>
     <script src="scripts/rent.js"></script>
+    <script src="scripts/parcels_owner_using.js"></script>-->
+    <script src="scripts/map.js"></script>
+
+    <script src="scripts/treemap.js"></script>
     <script>
         var coll = document.getElementsByClassName("how-to-bar");
         var i;
