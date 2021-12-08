@@ -72,6 +72,13 @@ map.on('load', function() {
         ]);
     }
 
+    var change_rent = function(value) {
+        console.log(value)
+        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'rent-xlsx rent xlsx_Орендар'],
+            value, 1.0, 0.2
+        ]);
+    }
+
 
 
     map.on('zoom', function() {
@@ -84,7 +91,7 @@ map.on('load', function() {
         if (map.getZoom() > 12) {
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML(e.features[0].properties.ownership + " " + e.features[0].properties.cadnum + "/n" + e.features[0].properties.category)
+                .setHTML(e.features[0].properties.ownership + " " + e.features[0].properties.cadnum + "\n" + e.features[0].properties.category + "\n")
                 .addTo(map);
         }
     });
@@ -107,6 +114,15 @@ map.on('load', function() {
         d3.select(this.parentNode).selectAll(".map_button").classed("active", false);
         d3.select(this).classed("active", true);
         change_op(selected_value)
+    });
+
+
+    d3.select("#rent-switch-buttons").selectAll(".map_button").on("click", function() {
+        let selected_value = d3.select(this).attr("value");
+        console.log("push rent-switch-buttons")
+        d3.select(this.parentNode).selectAll(".map_button").classed("active", false);
+        d3.select(this).classed("active", true);
+        change_rent(selected_value)
     });
 
 
