@@ -126,11 +126,7 @@
                 .attr("fill", "#4562AB")
                 .attr("rx", 6)
                 .attr("ry", 6)
-
-            // If less group in the new dataset, I delete the ones not in use anymore
             u
-                .exit()
-                .remove()
                 .on("mouseover", showTooltip)
                 .on("mousemove", moveTooltip)
                 .on("mouseleave", hideTooltip)

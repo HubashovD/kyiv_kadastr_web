@@ -91,7 +91,7 @@
                 "all", ["==", "$type", "Polygon"],
                 ["==", "class", "residential"]
             ],
-            "layout": { "visibility": "visible" },
+            "layout": { "visibility": "none" },
             "paint": { "fill-color": "hsl(0, 2%, 5%)", "fill-opacity": 0.4 }
         },
         {
@@ -288,7 +288,7 @@
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "visible"
+                "visibility": "none"
             },
             "paint": {
                 "line-color": "rgb(12,12,12)",
