@@ -11,8 +11,11 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
+
+
     <script src="lib/d3v5_min.js"></script>
-    <!--<script src="https://d3js.org/d3.v4.js"></script> -->
+    <!--    <script src="https://d3js.org/d3.v6.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script> -->
     <script src="lib/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/leaflet.css">
@@ -35,146 +38,162 @@
 
 <body>
     <div id="background">
+        <div id="title-frame">
 
-
-        <div class="map_grid">
-
-            <div class="box1">
-                <div id='map'></div>
+            <div id="header-background">
             </div>
-
-            <div class="box2">
-                <div>
-                    <p>Форма власності</p>
+            <H1>Кому належить земля в Києві?</H1>
+            <div id="pic-background">
+                <img src="pic/back.png" width="100%">
+            </div>
+        </div>
+        <div id="main">
+            <h2>Чи дійсно земля в Україні перебуває під “особливою охороною” ?</h2>
+            <article class="usual-text">
+                <p>
+                    Вся наявна в Україні інформація про землю акумулюється у Держгеокадастру та, а частково у органів місцевого самоврядування. І здавалося б якщо земля перебуває під “особливою охороною”, то має вестись її облік, і держава точна має знати чим володіє і хто
+                    цим користується, насправді ж це не так. Будемо розбиратись.
+                </p>
+                <p>
+                    Texty.org.ua розробили проект побудований на основі даних Держгеокадастру та даних про орендарів земельних ділянок комунальної власності міста Києва.
+                </p>
+                <p>
+                    Проект дозволяє проаналізувати інформацію про форму власності на земельні ділянки в місті Києві, їх площу та цільове призначення. Але про майже половину території міста у Держгеокадастру немає жодної інформації - просто порожні місця. Для половини із
+                    тих ділянок, які все ж таки існують (тобто містяться на публічній кадастровій карті) відсутня інформація про власника. Тобто Держава, знає про власників лише чверті площі столиці України.
+                </p>
+                <p>
+                    Загалом земельний кадастр передбачає три форми власності: Державна, Комунальна та приватна. І, якщо із комунальною власністю все більш менш зрозуміло, адже фактично цим опікується КМДА, зокрема департамент земельних ресурсів, який наразі проводить інвентаризацію
+                    земельних ділянок. Що важливо - фактично “безхазяйна земля” (якщо така в принципі буває, яка знаходиться на в межах територіальної громади ( в нашому випадку міста Києва) фактично належить територіальній громаді. Тому інвентаризація
+                    земельних ділянок, яку проводить департамент земельних відносин КМДА, без участі Держгеокадастру - фактично неможливий. Зокрема і щодо величезної кількості та площі земельних ділянок, для яких невідома навіть форма власності. Іноді
+                    тут зустрічаються “ласі шматочки” серед лісу, чи біля води.
+                </p>
+                <p>
+                    Ще гірша ситуація із використанням земельних ділянок. Відповідно до нормативних актів, які затверджують ведення державного земельного кадастру ми маємо аж три графи, які мають уточнювати цільове призначення земельних ділянок: Категорія земель за основним
+                    цільовим призначенням, та Назва цільового призначення земельної ділянки згідно з документацією із землеустрою. І якщо із категорією земель все більш менш клалось - таких категорій всього 10, то от із назвою цільвого призначення, щось
+                    пішло не так. Ці дані майже неможливо унормувати, і це інше, величезне питання, до реєстраторів і тих, хто взагалі вносить ці дані до державного земельного кадастру. Тому, хоч ми і знаємо у “якому напрямку” використовується земля,
+                    але точно це встановити неможливо.
+                </p>
+            </article>
+            <div class="map_grid">
+                <div class="box1">
+                    <div id='map'></div>
                 </div>
-                <div id="legend">
-                    <div class="legend-row">
-                        <div id="gov"></div>
-                        <p>Державна власність</p>
+                <div class="box2">
+                    <div id="legend-title">
+                        Форма власності
                     </div>
-                    <div class="legend-row">
-                        <div id="kiev"></div>
-                        <p>Комунальна власніть</p>
+                    <div id="legend">
+                        <div class="legend-row">
+                            <div id="gov"></div>
+                            <p>Державна власність</p>
+                        </div>
+                        <div class="legend-row">
+                            <div id="kiev"></div>
+                            <p>Комунальна власніть</p>
+                        </div>
+                        <div class="legend-row">
+                            <div id="pers"></div>
+                            <p>"Приватна власність</p>
+                        </div>
+                        <div class="legend-row">
+                            <div id="unk"></div>
+                            <p>"Не визначено</p>
+                        </div>
                     </div>
-                    <div class="legend-row">
-                        <div id="pers"></div>
-                        <p>"Приватна власність</p>
-                    </div>
-                    <div class="legend-row">
-                        <div id="unk"></div>
-                        <p>"Не визначено</p>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="how-to-section-wrapper">
-                        <div class="how-to-section is-closed" id="how-line">
-                            <div class="how-to-border">
-                                <div class="how-to-bar">
-                                    <p class="how-to-title">Використання земель</p>
-                                    <!-- <span></span> -->
-                                </div>
-                                <div class="how-to-description">
-                                    <div class="buttons" id="ukraine-switch-buttons">
-                                        <div>
-                                            <input type="radio" name="drone" class="map_button" value="Землі лісогосподарського призначення">Землі лісогосподарського призначення</div>
-                                        <div>
-                                            <input type="radio" name="drone" class="map_button" value="Землі житлової та громадської забудови">Землі житлової та громадської забудови</div>
-                                        <div>
-                                            <input type="radio" name="drone" class="map_button" value="Землі промисловості, транспорту, зв’язку, енергетики, оборони та іншого призначення">Землі промисловості, транспорту, зв’язку, енергетики, оборони та
-                                            іншого призначення
+                    <div class="container">
+                        <div class="how-to-section-wrapper">
+                            <div class="how-to-section is-closed" id="how-line">
+                                <div class="how-to-border">
+                                    <div class="how-to-bar">
+                                        <p class="how-to-title">Використання земель</p>
+                                        <!-- <span></span> -->
+                                    </div>
+                                    <div class="how-to-description">
+                                        <div class="buttons" id="ukraine-switch-buttons">
+                                            <div>
+                                                <input type="radio" name="drone" class="map_button" value="Землі лісогосподарського призначення"> Землі лісогосподарського призначення</div>
+                                            <div>
+                                                <input type="radio" name="drone" class="map_button" value="Землі житлової та громадської забудови">Землі житлової та громадської забудови</div>
+                                            <div>
+                                                <input type="radio" name="drone" class="map_button" value="Землі промисловості, транспорту, зв’язку, енергетики, оборони та іншого призначення">Землі промисловості, транспорту, зв’язку, енергетики, оборони
+                                                та іншого призначення
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="drone" class="map_button" value="Не визначено">Не визначено</div>
+                                            <div>
+                                                <input type="radio" name="drone" class="map_button" value="Землі природно-заповідного та іншого природоохоронного призначення">Землі природно-заповідного та іншого природоохоронного призначення</div>
+                                            <div> <input type="radio" name="drone" class="map_button" value="Землі сільськогосподарського призначення">Землі сільськогосподарського призначення</div>
+                                            <div> <input type="radio" name="drone" class="map_button" value="Землі водного фонду">Землі водного фонду</div>
+                                            <div> <input type="radio" name="drone" class="map_button" value="Землі рекреаційного призначення">Землі рекреаційного призначення</div>
+                                            <div> <input type="radio" name="drone" class="map_button" value="Землі історико-культурного призначення">Землі історико-культурного призначення</div>
+                                            <div> <input type="radio" name="drone" class="map_button" value="Землі оздоровчого призначення">Землі оздоровчого призначення</div>
                                         </div>
-                                        <div>
-                                            <input type="radio" name="drone" class="map_button" value="Не визначено">Не визначено</div>
-                                        <div>
-                                            <input type="radio" name="drone" class="map_button" value="Землі природно-заповідного та іншого природоохоронного призначення">Землі природно-заповідного та іншого природоохоронного призначення</div>
-                                        <div> <input type="radio" name="drone" class="map_button" value="Землі сільськогосподарського призначення">Землі сільськогосподарського призначення</div>
-                                        <div> <input type="radio" name="drone" class="map_button" value="Землі водного фонду">Землі водного фонду</div>
-                                        <div> <input type="radio" name="drone" class="map_button" value="Землі рекреаційного призначення">Землі рекреаційного призначення</div>
-                                        <div> <input type="radio" name="drone" class="map_button" value="Землі історико-культурного призначення">Землі історико-культурного призначення</div>
-                                        <div> <input type="radio" name="drone" class="map_button" value="Землі оздоровчого призначення">Землі оздоровчого призначення</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="how-to-section-wrapper">
-                        <div class="how-to-section is-closed" id="how-line">
-                            <div class="how-to-border">
-                                <div class="how-to-bar">
-                                    <p class="how-to-title">ТОП 10 орендарів земельних ділянок</p>
-                                    <!-- <span></span> -->
-                                </div>
-                                <div class="how-to-description">
-                                    <div class="buttons" id="rent-switch-buttons">
-                                        <div><input type="radio" name="drone" class="map_button" value='Публічне акціонерне товариство "Акціонерна компанія"Київводоканал"'>Публічне акціонерне товариство ""Акціонерна компанія""Київводоканал""</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Товариство з обмеженою відповідальністю "Птахофабрика Київська"'>Товариство з обмеженою відповідальністю "Птахофабрика Київська"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Товариство з обмеженою відповідальністю "Літораль"'>Товариство з обмеженою відповідальністю "Літораль"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Відкрите акціонерне товариство "Гідромеханізація"'>Відкрите акціонерне товариство "Гідромеханізація"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Товариство з обмеженою відповідальністю "МЕГАПОЛІСЖИТЛОБУД"'>Товариство з обмеженою відповідальністю "МЕГАПОЛІСЖИТЛОБУД"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Садово-дачне товариство "Стадне"'>Садово-дачне товариство "Стадне"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Відкрите акціонерне товариство Агрофірма "Теплиці України"'>Відкрите акціонерне товариство Агрофірма "Теплиці України"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Відкрите акціонерне товариство "Київрибгосп"'>Відкрите акціонерне товариство "Київрибгосп"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='Сільськогосподарське відкрите акціонерне товариство "Київська овочева фабрика"'>Сільськогосподарське відкрите акціонерне товариство "Київська овочева фабрика"</div>
-                                        <div><input type="radio" name="drone" class="map_button" value='ОБСЛУГОВУЮЧИЙ КООПЕРАТИВ "САДОВО-ДАЧНИЙ КООПЕРАТИВ "ОРХІДЕЯ-3"'>ОБСЛУГОВУЮЧИЙ КООПЕРАТИВ "САДОВО-ДАЧНИЙ КООПЕРАТИВ "ОРХІДЕЯ-3"</div>
+                    <div class="container">
+                        <div class="how-to-section-wrapper">
+                            <div class="how-to-section is-closed" id="how-line">
+                                <div class="how-to-border">
+                                    <div class="how-to-bar">
+                                        <p class="how-to-title">ТОП 10 орендарів земельних ділянок</p>
+                                        <!-- <span></span> -->
+                                    </div>
+                                    <div class="how-to-description">
+                                        <div class="buttons" id="rent-switch-buttons">
+                                            <div><input type="radio" name="drone" class="map_button" value='Публічне акціонерне товариство "Акціонерна компанія"Київводоканал"'>Публічне акціонерне товариство ""Акціонерна компанія""Київводоканал""</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Товариство з обмеженою відповідальністю "Птахофабрика Київська"'>Товариство з обмеженою відповідальністю "Птахофабрика Київська"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Товариство з обмеженою відповідальністю "Літораль"'>Товариство з обмеженою відповідальністю "Літораль"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Відкрите акціонерне товариство "Гідромеханізація"'>Відкрите акціонерне товариство "Гідромеханізація"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Товариство з обмеженою відповідальністю "МЕГАПОЛІСЖИТЛОБУД"'>Товариство з обмеженою відповідальністю "МЕГАПОЛІСЖИТЛОБУД"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Садово-дачне товариство "Стадне"'>Садово-дачне товариство "Стадне"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Відкрите акціонерне товариство Агрофірма "Теплиці України"'>Відкрите акціонерне товариство Агрофірма "Теплиці України"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Відкрите акціонерне товариство "Київрибгосп"'>Відкрите акціонерне товариство "Київрибгосп"</div>
+                                            <div><input type="radio" name="drone" class="map_button" value='Сільськогосподарське відкрите акціонерне товариство "Київська овочева фабрика"'>Сільськогосподарське відкрите акціонерне товариство "Київська овочева
+                                                фабрика"
+                                            </div>
+                                            <div><input type="radio" name="drone" class="map_button" value='ОБСЛУГОВУЮЧИЙ КООПЕРАТИВ "САДОВО-ДАЧНИЙ КООПЕРАТИВ "ОРХІДЕЯ-3"'>ОБСЛУГОВУЮЧИЙ КООПЕРАТИВ "САДОВО-ДАЧНИЙ КООПЕРАТИВ "ОРХІДЕЯ-3"</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="show_all">
-                    <div class="map_button" id="change_op" value="schools_data" checked> Відобразити все</div>
+                    <div id="show_all">
+                        <div class="map_button" id="change_op" value="schools_data" checked> Відобразити все</div>
+                    </div>
                 </div>
             </div>
+            <div>
+                <div id="rects"></div>
+            </div>
+            <div id="graph-box">
+                <select id="selectButton" class="custom-select"></select>
+                <div id="parcels_owner_using"></div>
+            </div>
+
+            <script src="scripts/parcels_owner_using.js"></script>
+            <script src="scripts/map.js"></script>
+            <script src="scripts/rects.js"></script>
+            <script>
+                var coll = document.getElementsByClassName("how-to-bar");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
         </div>
-        <select id="selectButton" class="custom-select"></select>
-
-
-
-
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti beatae quis, aspernatur exercitationem earum nam dignissimos blanditiis voluptate molestias, debitis iste. Non cumque sint perspiciatis deleniti suscipit beatae consequatur iure.
-        </div>
-        <div id="parcels_owner_using"></div>
-
-
-        <!--
-    <div id="parcels_using"></div>
-<div id="tree_map"></div>
-
-   
-
-    
-
-    <div id="rent"></div>
-
-    
-    <script src="scripts/rent.js"></script>
-    <script src="scripts/treemap.js"></script>
-    <script src="scripts/parcels_using.js"></script>-->
-        <script src="scripts/parcels_owner_using.js"></script>
-        <script src="scripts/map.js"></script>
-
-
-        <script>
-            var coll = document.getElementsByClassName("how-to-bar");
-            var i;
-
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    }
-                });
-            }
-        </script>
     </div>
 </body>
 

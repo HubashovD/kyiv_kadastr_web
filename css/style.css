@@ -69,8 +69,46 @@
     }
 }
 
+#title-frame {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#pic-background #header-background {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#header-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+H1 {
+    margin-top: 10%;
+    width: 100%;
+    position: absolute;
+    vertical-align: middle;
+}
+
 #background {
     background-color: rgb(255, 253, 238);
+}
+
+#main {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+h1 {
+    text-align: center;
 }
 
 .usual-text p {
@@ -80,6 +118,7 @@
     padding: 0;
     box-align: justify;
     margin-left: 12.5vw;
+    font-size: 20px;
 }
 
 .small-header {
@@ -147,19 +186,18 @@
 }
 
 #map {
-    width: 60vw;
-    height: 800px;
+    width: 70vw;
+    height: 700px;
+    margin-right: 1vw;
 }
 
 .map_button {
-    padding: 9px 11px 7px 11px;
-    font: 16px nyt-franklin, sans-serif;
+    font: 10px, sans-serif;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: inline-block;
     cursor: pointer;
     background: #fff;
-    margin: 0 0 0 0.25em 0;
 }
 
 .map_button:hover {
@@ -185,19 +223,32 @@
     display: grid;
     grid-template-columns: repeat(3fr, 1fr);
     grid-auto-rows: 100px;
+    margin-top: 3vw;
 }
 
 .box1 {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
-    grid-row-end: 10;
+    grid-row-end: 8;
 }
 
 .box2 {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+}
+
+#legend-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    scroll-behavior: smooth;
+    font-family: e-UkraineLight;
+    z-index: 1;
+    min-height: 100%;
 }
 
 .container .how-to-section-wrapper {
@@ -220,10 +271,19 @@
     line-height: 1.5em;
 }
 
+.container .how-to-section#how-line .how-to-bar {
+    background-color: #FFF4D7;
+}
+
+.container .how-to-section#how-line .how-to-description {
+    background-color: #FFF4D7;
+}
+
 #legend {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 2;
     grid-auto-rows: 25%;
+    margin-bottom: 1vw;
 }
 
 #legend .legend-row {
@@ -232,8 +292,9 @@
 }
 
 #legend .legend-row p {
-    width: max-content;
+    width: 10vw;
     margin-top: 5px;
+    margin-left: 1vw;
 }
 
 #gov {
@@ -266,4 +327,13 @@
     height: 16px;
     width: 16px;
     margin-top: 5px;
+}
+
+#graph-box {
+    margin-top: 3vw;
+}
+
+#selectButton {
+    background-color: rgb(255, 253, 238);
+    width: 12vw;
 }

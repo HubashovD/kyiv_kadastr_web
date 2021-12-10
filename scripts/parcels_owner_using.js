@@ -123,7 +123,7 @@
                 .attr("y", function(d) { return y(d.category); })
                 .attr("height", 20)
                 .attr("width", function(d) { return x(d.area); })
-                .attr("fill", "#4562AB")
+                .attr("fill", "#a2595f")
                 .attr("rx", 6)
                 .attr("ry", 6)
             u
@@ -139,6 +139,7 @@
                 .append("text")
                 .attr("class", "bar-labels")
                 .merge(label)
+                .attr("font-size", 14)
                 .attr("y", function(d) { return y(d.category) + 10; })
                 .transition() // and apply changes to all of them
                 .duration(1000)

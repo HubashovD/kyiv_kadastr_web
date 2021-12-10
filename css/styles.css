@@ -26,14 +26,6 @@ input::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-.container {
-    scroll-behavior: smooth;
-    background-color: white;
-    font-family: e-UkraineLight;
-    z-index: 1;
-    min-height: 100%;
-}
-
 .container .header-wrapper,
 .container .logo-footer,
 .container .navigation-menu,
@@ -345,10 +337,6 @@ input::-webkit-calendar-picker-indicator {
 .container .how-to-section#how-calc .how-to-title {
     width: 75%;
     font-size: 16px;
-}
-
-.container .how-to-section#how-line {
-    width: calc(67% - 36px);
 }
 
 .container .how-to-section#how-line .how-to-bar {
