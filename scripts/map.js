@@ -98,6 +98,14 @@ map.on('load', function() {
         ]);
     }
 
+    var comm_rent = function(value) {
+        console.log(value)
+        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'ownership'],
+            value, 1.0, 0.2
+        ]);
+        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'rent-rent'], "rent", 1.0, 0.0]);
+    }
+
 
 
     map.on('zoom', function() {
@@ -123,6 +131,8 @@ map.on('load', function() {
     })*/
 
     d3.select("#change_op").on("click", function() {
+        let selected_value = d3.select(this).attr("value");
+        console.log(selected_value)
         console.log("All_objects")
         map.removeLayer('schools_data');
         redrawUkraineMap()
@@ -143,6 +153,13 @@ map.on('load', function() {
         d3.select(this).classed("active", true);
         change_rent(selected_value)
     });
+
+    d3.select("#comm_rent").on("click", function() {
+        let selected_value = d3.select(this).attr("value");
+        console.log(selected_value)
+        d3.select(this.parentNode).selectAll(".map_button").classed("active", false);
+        comm_rent(selected_value)
+    })
 
 
 

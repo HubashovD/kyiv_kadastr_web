@@ -1,3 +1,5 @@
 
 vector_tiles/parcels.geojson
 vector_tiles/parcels_4326.geojson
+vector_tiles/parcels_1.geojson
+vector_tiles/parcels.mbtiles

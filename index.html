@@ -166,7 +166,10 @@
                         </div>
                     </div>
                     <div id="show_all">
-                        <div class="map_button" id="change_op" value="schools_data" checked> Відобразити все</div>
+                        <div class="map_button" id="change_op" value="schools_data"> Відобразити все</div>
+                    </div>
+                    <div>
+                        <div class="map_button" id="comm_rent" value="Комунальна власність">Комунальна власність</div>
                     </div>
                 </div>
             </div>
@@ -213,7 +216,7 @@
                     .style("display", "flex")
                     .style("margin", "100px auto")
                     .selectAll("div")
-                    .data([1.48, 1.21, 0.72, 0.7])
+                    .data([2.19, 1.48, 0.52, 0.38])
                     .enter()
                     .append("div")
                     .attr("id", function(d, i) {
@@ -242,14 +245,14 @@
 
 
                 var tag2 = document.createElement("p");
-                var text2 = document.createTextNode("Приватна власність	5263.71 га");
+                var text2 = document.createTextNode("Приватна власність	5209.95 га");
                 tag2.appendChild(text2);
                 var element2 = document.getElementById("rect2");
                 element2.appendChild(tag2);
 
 
                 var tag3 = document.createElement("p");
-                var text3 = document.createTextNode("Державна власність	4991.20 га");
+                var text3 = document.createTextNode("Державна власність	3846.19 га");
                 tag3.appendChild(text3);
                 var element3 = document.getElementById("rect3");
                 element3.appendChild(tag3);

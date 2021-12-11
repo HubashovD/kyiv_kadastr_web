@@ -1,389 +1,389 @@
-@media (min-width: 1680px) {
-    #parcels_owner_using,
-    #parcels_using {
-        width: 1408px;
+    @media (min-width: 1680px) {
+        #parcels_owner_using,
+        #parcels_using {
+            width: 1408px;
+        }
+        #map {
+            width: 60vw;
+        }
+        .how-to-section-wrapper {
+            width: 20vw;
+        }
     }
-    #map {
-        width: 60vw;
+    
+    @media (min-width: 1280px) and (max-width: 1679px) {
+        #parcels_owner_using,
+        #parcels_using {
+            width: 80%;
+        }
+        #map {
+            width: 60vw;
+        }
     }
-    .how-to-section-wrapper {
-        width: 20vw;
+    
+    @media (min-width: 992px) and (max-width: 1279px) {
+        .small-header {
+            width: 864px !important;
+        }
+        #parcels_owner_using,
+        #parcels_using {
+            width: 80%;
+        }
+        .map_grid {
+            display: flex !important;
+        }
     }
-}
-
-@media (min-width: 1280px) and (max-width: 1679px) {
-    #parcels_owner_using,
-    #parcels_using {
-        width: 80%;
+    
+    @media (max-width: 991px) and (min-width: 480px) {
+        #parcels_owner_using,
+        #parcels_using {
+            width: 95%;
+        }
+        .usual-text p {
+            width: 85% !important;
+        }
+        .map_grid {
+            display: flex !important;
+        }
+        #map {
+            width: 99vw;
+        }
     }
-    #map {
-        width: 60vw;
+    
+    @media (max-width: 479px) {
+        #parcels_owner_using,
+        #parcels_using {
+            width: 95%;
+        }
+        .usual-text p {
+            width: 85% !important;
+        }
+        .custom-select {
+            width: 50vw;
+        }
+        .map_grid {
+            display: flex !important;
+        }
+        #map {
+            width: 99vw;
+        }
     }
-}
-
-@media (min-width: 992px) and (max-width: 1279px) {
+    
+    #title-frame {
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    #pic-background #header-background {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    
+    #header-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        opacity: 0.7;
+    }
+    
+    #main-title {
+        margin-top: 10%;
+        width: 100%;
+        font-weight: 900;
+        position: absolute;
+        vertical-align: middle;
+        font-size: 100px;
+        font-family: 'Montserrat';
+    }
+    
+    .second-title {
+        width: 50%;
+        margin-left: 12.5vw;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 1vw;
+        margin-top: 2vw;
+    }
+    
+    #background {
+        background-color: rgb(255, 253, 238);
+    }
+    
+    #main {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        font-family: 'Montserrat';
+    }
+    
+    .usual-text p {
+        line-height: 1.5em;
+        margin-bottom: 2.5em;
+        width: 50%;
+        padding: 0;
+        box-align: justify;
+        margin-left: 12.5vw;
+        font-size: 20px;
+    }
+    
     .small-header {
-        width: 864px !important;
+        font-size: 1.7em;
+        margin-bottom: 1em;
+        display: block;
+        font-family: 'Montserrat';
+        line-height: 1.5em;
+        -webkit-margin-before: 1em;
+        margin-block-start: 1em;
+        -webkit-margin-after: 1em;
+        margin-block-end: 1em;
+        -webkit-margin-start: 0px;
+        margin-inline-start: 0px;
+        -webkit-margin-end: 0px;
+        margin-inline-end: 0px;
+        padding: 0;
+        box-align: justify;
+        margin-left: 12.5vw;
+        margin-right: 20%;
+        margin-top: 50px;
+        position: relative;
+        width: 67%;
+        max-width: 50%;
     }
-    #parcels_owner_using,
+    
     #parcels_using {
-        width: 80%;
+        position: relative;
+        display: block !important;
+        max-width: 99vw !important;
+        margin-left: 2.0625vw;
     }
-    .map_grid {
-        display: flex !important;
+    
+    #parcels_using .tooltip {
+        position: absolute;
+        z-index: 999;
+        pointer-events: none;
     }
-}
-
-@media (max-width: 991px) and (min-width: 480px) {
-    #parcels_owner_using,
-    #parcels_using {
-        width: 95%;
+    
+    #parcels_owner_using {
+        position: relative;
+        margin-left: 2.0625vw;
     }
-    .usual-text p {
-        width: 85% !important;
+    
+    #parcels_owner_using .tooltip {
+        position: absolute;
+        pointer-events: none;
     }
-    .map_grid {
-        display: flex !important;
-    }
-    #map {
-        width: 99vw;
-    }
-}
-
-@media (max-width: 479px) {
-    #parcels_owner_using,
-    #parcels_using {
-        width: 95%;
-    }
-    .usual-text p {
-        width: 85% !important;
-    }
+    
     .custom-select {
-        width: 50vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3.5rem;
+        margin: 0 5px 0 0;
+        max-width: 500px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        color: #000000;
+        box-sizing: border-box;
+        position: relative;
+        vertical-align: middle;
+        margin-left: 12.5vw;
     }
-    .map_grid {
-        display: flex !important;
-    }
+    
     #map {
-        width: 99vw;
+        width: 70vw;
+        height: 700px;
+        margin-right: 1vw;
     }
-}
-
-#title-frame {
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-}
-
-#pic-background #header-background {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-#header-background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgb(255, 255, 255);
-    opacity: 0.7;
-}
-
-#main-title {
-    margin-top: 10%;
-    width: 100%;
-    font-weight: 900;
-    position: absolute;
-    vertical-align: middle;
-    font-size: 100px;
-    font-family: 'Montserrat';
-}
-
-.second-title {
-    width: 50%;
-    margin-left: 12.5vw;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 1vw;
-    margin-top: 2vw;
-}
-
-#background {
-    background-color: rgb(255, 253, 238);
-}
-
-#main {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    font-family: 'Montserrat';
-}
-
-.usual-text p {
-    line-height: 1.5em;
-    margin-bottom: 2.5em;
-    width: 50%;
-    padding: 0;
-    box-align: justify;
-    margin-left: 12.5vw;
-    font-size: 20px;
-}
-
-.small-header {
-    font-size: 1.7em;
-    margin-bottom: 1em;
-    display: block;
-    font-family: 'Montserrat';
-    line-height: 1.5em;
-    -webkit-margin-before: 1em;
-    margin-block-start: 1em;
-    -webkit-margin-after: 1em;
-    margin-block-end: 1em;
-    -webkit-margin-start: 0px;
-    margin-inline-start: 0px;
-    -webkit-margin-end: 0px;
-    margin-inline-end: 0px;
-    padding: 0;
-    box-align: justify;
-    margin-left: 12.5vw;
-    margin-right: 20%;
-    margin-top: 50px;
-    position: relative;
-    width: 67%;
-    max-width: 50%;
-}
-
-#parcels_using {
-    position: relative;
-    display: block !important;
-    max-width: 99vw !important;
-    margin-left: 2.0625vw;
-}
-
-#parcels_using .tooltip {
-    position: absolute;
-    z-index: 999;
-    pointer-events: none;
-}
-
-#parcels_owner_using {
-    position: relative;
-    margin-left: 2.0625vw;
-}
-
-#parcels_owner_using .tooltip {
-    position: absolute;
-    pointer-events: none;
-}
-
-.custom-select {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 3.5rem;
-    margin: 0 5px 0 0;
-    max-width: 500px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    color: #000000;
-    box-sizing: border-box;
-    position: relative;
-    vertical-align: middle;
-    margin-left: 12.5vw;
-}
-
-#map {
-    width: 70vw;
-    height: 700px;
-    margin-right: 1vw;
-}
-
-.map_button {
-    font: 10px, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    background: #fff;
-}
-
-.map_button:hover {
-    background: lightgrey;
-}
-
-#change_op {
-    padding: 9px 11px 7px 11px;
-    font: 16px nyt-franklin, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    background: #fff;
-    margin: 0 0.25em;
-}
-
-#change_op:hover {
-    background: lightgrey;
-}
-
-.map_grid {
-    display: grid;
-    grid-template-columns: repeat(3fr, 1fr);
-    grid-auto-rows: 100px;
-    margin-top: 3vw;
-}
-
-.box1 {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 8;
-}
-
-.box2 {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-#legend-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.container {
-    scroll-behavior: smooth;
-    font-family: 'Montserrat';
-    z-index: 1;
-    min-height: 100%;
-}
-
-.container .how-to-section-wrapper {
-    max-width: 1680px;
-    margin-left: 12.5vw;
-    width: 24vw;
-}
-
-.container .how-to-section-wrapper {
-    margin: 0px auto 0px auto;
-    align-self: center;
-}
-
-.how-to-bar .how-to-border {
-    max-width: 80vw;
-    margin-left: 2em !important;
-}
-
-.how-to-description {
-    line-height: 1.5em;
-}
-
-.container .how-to-section#how-line .how-to-bar {
-    background-color: #FFF4D7;
-}
-
-.container .how-to-section#how-line .how-to-description {
-    background-color: #FFF4D7;
-}
-
-#legend {
-    display: grid;
-    grid-template-columns: 2;
-    grid-auto-rows: 25%;
-    margin-bottom: 1vw;
-}
-
-#legend .legend-row {
-    display: grid;
-    grid-template-columns: repeat(2, 2%);
-}
-
-#legend .legend-row p {
-    width: 10vw;
-    margin-top: 5px;
-    margin-left: 1vw;
-}
-
-#gov {
-    background-color: rgb(100, 102, 171);
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    margin-top: 5px;
-}
-
-#kiev {
-    background-color: rgb(162, 89, 95);
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    margin-top: 5px;
-}
-
-#pers {
-    background-color: rgb(94, 117, 81);
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    margin-top: 5px;
-}
-
-#unk {
-    background-color: rgb(239, 233, 172);
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    margin-top: 5px;
-}
-
-#graph-box {
-    margin-top: 3vw;
-}
-
-#selectButton {
-    background-color: rgb(255, 253, 238);
-    width: 12vw;
-}
-
-#tree-button {
-    font-family: 'Montserrat';
-    font: 14px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: inline-block;
-    cursor: pointer;
-    background: rgb(255, 253, 238);
-    width: 15vw;
-    height: 3vw;
-}
-
-#image_1 {
-    width: 70vw;
-}
-
-#rect0 {
-    background-color: rgb(239, 233, 172);
-}
-
-#rect1 {
-    background-color: rgb(162, 89, 95);
-}
-
-#rect2 {
-    background-color: rgb(94, 117, 81);
-}
-
-#rect3 {
-    background-color: rgb(100, 102, 171);
-}
-
-#rect0,
-#rect1,
-#rect2,
-#rect3 p {
-    color: black;
-    text-align: center;
-    font-family: 'Montserrat';
-}
+    
+    .map_button {
+        font: 10px, sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        background: #fff;
+    }
+    
+    .map_button:hover {
+        background: lightgrey;
+    }
+    
+    #change_op {
+        padding: 9px 11px 7px 11px;
+        font: 16px nyt-franklin, sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        background: #fff;
+        margin: 0 0.25em;
+    }
+    
+    #change_op:hover {
+        background: lightgrey;
+    }
+    
+    .map_grid {
+        display: grid;
+        grid-template-columns: repeat(3fr, 1fr);
+        grid-auto-rows: 100px;
+        margin-top: 3vw;
+    }
+    
+    .box1 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+    
+    .box2 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    #legend-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .container {
+        scroll-behavior: smooth;
+        font-family: 'Montserrat';
+        z-index: 1;
+        min-height: 100%;
+    }
+    
+    .container .how-to-section-wrapper {
+        max-width: 1680px;
+        margin-left: 12.5vw;
+        width: 24vw;
+    }
+    
+    .container .how-to-section-wrapper {
+        margin: 0px auto 0px auto;
+        align-self: center;
+    }
+    
+    .how-to-bar .how-to-border {
+        max-width: 80vw;
+        margin-left: 2em !important;
+    }
+    
+    .how-to-description {
+        line-height: 1.5em;
+    }
+    
+    .container .how-to-section#how-line .how-to-bar {
+        background-color: #FFF4D7;
+    }
+    
+    .container .how-to-section#how-line .how-to-description {
+        background-color: #FFF4D7;
+    }
+    
+    #legend {
+        display: grid;
+        grid-template-columns: 2;
+        grid-auto-rows: 25%;
+        margin-bottom: 1vw;
+    }
+    
+    #legend .legend-row {
+        display: grid;
+        grid-template-columns: repeat(2, 2%);
+    }
+    
+    #legend .legend-row p {
+        width: 10vw;
+        margin-top: 5px;
+        margin-left: 1vw;
+    }
+    
+    #gov {
+        background-color: rgb(100, 102, 171);
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-top: 5px;
+    }
+    
+    #kiev {
+        background-color: rgb(162, 89, 95);
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-top: 5px;
+    }
+    
+    #pers {
+        background-color: rgb(94, 117, 81);
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-top: 5px;
+    }
+    
+    #unk {
+        background-color: rgb(239, 233, 172);
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-top: 5px;
+    }
+    
+    #graph-box {
+        margin-top: 3vw;
+    }
+    
+    #selectButton {
+        background-color: rgb(255, 253, 238);
+        width: 12vw;
+    }
+    
+    #tree-button {
+        font-family: 'Montserrat';
+        font: 14px;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: inline-block;
+        cursor: pointer;
+        background: rgb(255, 253, 238);
+        width: 15vw;
+        height: 3vw;
+    }
+    
+    #image_1 {
+        width: 70vw;
+    }
+    
+    #rect0 {
+        background-color: rgb(239, 233, 172);
+    }
+    
+    #rect1 {
+        background-color: rgb(162, 89, 95);
+    }
+    
+    #rect2 {
+        background-color: rgb(94, 117, 81);
+    }
+    
+    #rect3 {
+        background-color: rgb(100, 102, 171);
+    }
+    
+    #rect0,
+    #rect1,
+    #rect2,
+    #rect3 p {
+        color: black;
+        text-align: center;
+        font-family: 'Montserrat';
+    }
