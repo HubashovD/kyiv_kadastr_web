@@ -31,6 +31,25 @@ map.on('load', function() {
         tiles: ["https://HubashovD.github.io/kyiv_kadastr_web/vector_tiles/parcels/{z}/{x}/{y}.pbf"]
     });
 
+    map.addSource('border', {
+        type: 'geojson',
+        // Use a URL for the value for the `data` property.
+        data: 'https://HubashovD.github.io/kyiv_kadastr_web/vector_tiles/border_1.geojson'
+    });
+
+    var border = map.addLayer({
+        'id': 'border_data',
+        'minzoom': 11,
+        'maxzoom': 16,
+        'source': 'border',
+        "type": "line",
+        'line-width': 100,
+        'paint': {
+            "line-color": "#ce4066"
+        }
+    });
+
+    console.log(border)
 
     function redrawUkraineMap() {
         map.addLayer({
@@ -74,7 +93,7 @@ map.on('load', function() {
 
     var change_rent = function(value) {
         console.log(value)
-        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'rent-xlsx rent xlsx_Орендар'],
+        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'rent-renter'],
             value, 1.0, 0.2
         ]);
     }
