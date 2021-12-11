@@ -1,18 +1,3 @@
-@font-face {
-    font-family: e-UkraineLight;
-    src: url(../e-Ukraine-Light.woff);
-}
-
-@font-face {
-    font-family: e-UkraineRegular;
-    src: url(../e-Ukraine-Regular.woff);
-}
-
-@font-face {
-    font-family: e-UkraineHead;
-    src: url(../e-UkraineHead-Bold.woff);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -228,9 +213,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .how-to-section .how-to-border {
-    border: double 2px transparent;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #C3AAB2 0.66%, #99EECC 57.2%, #80C0C8 75.87%, #4B8BFA 98.72%);
+    border: solid 2px black;
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
@@ -340,11 +323,11 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .how-to-section#how-line .how-to-bar {
-    background-color: #FFF4D7;
+    background-color: #fffdee;
 }
 
 .container .how-to-section#how-line .how-to-description {
-    background-color: #FFF4D7;
+    background-color: #fffdee;
 }
 
 @media (max-width: 768px) {
@@ -429,7 +412,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .header-background .header-block .text-bold p {
-    font-family: e-UkraineHead;
+    font-family: 'Montserrat';
     font-size: 3.2em;
     line-height: 1.2;
 }
@@ -720,7 +703,7 @@ input::-webkit-calendar-picker-indicator {
     padding: 24px 0;
     border-bottom: 2px solid black;
     font-size: 13px;
-    font-family: e-UkraineRegular;
+    font-family: 'Montserrat';
     position: relative;
 }
 
@@ -869,7 +852,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .about-project .header-container .header-text {
-    font-family: e-UkraineRegular;
+    font-family: 'Montserrat';
     font-size: 2.9em;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -877,7 +860,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .about-project .header-text-small {
-    font-family: e-UkraineRegular;
+    font-family: 'Montserrat';
     font-size: 2em;
     margin: 1em 0 0.7em 0;
 }
@@ -1449,7 +1432,7 @@ input::-webkit-calendar-picker-indicator {
 .container .main-section .doctor-stats-container #search-bar .input-box input {
     color: black;
     font-size: 16px;
-    font-family: e-UkraineLight;
+    font-family: 'Montserrat';
     width: 100%;
 }
 
@@ -1463,7 +1446,7 @@ input::-webkit-calendar-picker-indicator {
 
 .container .main-section .doctor-stats-container #search-bar .button-box button {
     font-size: 1em;
-    font-family: e-UkraineLight;
+    font-family: 'Montserrat';
     cursor: pointer;
 }
 
@@ -1740,7 +1723,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .main-section .doctor-stats-container .gender-age text {
-    font-family: e-UkraineLight;
+    font-family: 'Montserrat';
     font-size: 11px;
 }
 
@@ -2682,7 +2665,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .disease-section .line-chart-container .middle-space-right .diag-filter input {
-    font-family: e-UkraineLight;
+    font-family: 'Montserrat';
     font-size: 12px;
     border: none;
     width: 100%;
@@ -3001,11 +2984,11 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .container .charity-section #treemap-container text {
-    font-family: e-UkraineLight;
+    font-family: 'Montserrat';
 }
 
 .container .charity-section #treemap-container #chart .ctext {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container .charity-section #treemap-container #chart svg {
@@ -3417,7 +3400,7 @@ input::-webkit-calendar-picker-indicator {
     height: 3.5rem;
     margin: 0 5px 0 0;
     max-width: 350px;
-    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
     color: #000000;
@@ -3450,7 +3433,7 @@ input::-webkit-calendar-picker-indicator {
     height: 3.5rem;
     margin: 0 5px 0 0;
     max-width: 350px;
-    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
     color: #000000;

@@ -34,6 +34,10 @@
 
 
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -42,13 +46,13 @@
 
             <div id="header-background">
             </div>
-            <H1>Кому належить земля в Києві?</H1>
+            <p id="main-title">Кому належить <br> земля в Києві?</p>
             <div id="pic-background">
                 <img src="pic/back.png" width="100%">
             </div>
         </div>
         <div id="main">
-            <h2>Чи дійсно земля в Україні перебуває під “особливою охороною” ?</h2>
+            <div class="second-title">Чи дійсно земля в Україні перебуває під “особливою охороною” ?</div>
             <article class="usual-text">
                 <p>
                     Вся наявна в Україні інформація про землю акумулюється у Держгеокадастру та, а частково у органів місцевого самоврядування. І здавалося б якщо земля перебуває під “особливою охороною”, то має вестись її облік, і держава точна має знати чим володіє і хто
@@ -138,7 +142,7 @@
                             <div class="how-to-section is-closed" id="how-line">
                                 <div class="how-to-border">
                                     <div class="how-to-bar">
-                                        <p class="how-to-title">ТОП 10 орендарів земельних ділянок</p>
+                                        <p class="how-to-title">ТОП 10 орендарів</p>
                                         <!-- <span></span> -->
                                     </div>
                                     <div class="how-to-description">
@@ -166,17 +170,107 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <!--  <div>
                 <div id="rects"></div>
             </div>
             <div id="graph-box">
                 <select id="selectButton" class="custom-select"></select>
                 <div id="parcels_owner_using"></div>
+            </div>-->
+            <div id="rects"></div>
+            <div>
+                <select id="tree-button">
+                <option value="pic/all.svg">Загальний поділ</option>
+                <option value="pic/privat.svg">Приватна власність</option>
+                <option value="pic/commun.svg">Комунальна власність</option>
+                <option value="pic/non.svg">Не визначено</option>
+                <option value="pic/derzhava.svg">Дежавна власність</option>
+            </select>
             </div>
+            <div>
+                <img id="image_1" src="pic/all.svg">
+            </div>
+            <!-- <script>
+                function swapImage(aTag) {
+                    var fullCoverImage = document.getElementById("full_cover");
+                    var linkedImage = aTag.childNodes[0];
+                    var thumbSource = linkedImage.getAttribute("src");
+                    var coverSource = fullCoverImage.getAttribute("src");
+                    var newSource = thumbSource.replace("_thumb", "");
+                    fullCoverImage.setAttribute("src", newSource);
+                }
+            </script>
+            <a id="slide_thumb" onClick="swapImage(this);" href="Javascript:void(0);"><img src="pic/all.svg" /></a>
+            <a id="slide_thumb" onClick="swapImage(this);" href="Javascript:void(0);"><img src="pic/non.svg" /></a>
 
+            <img id="full_cover" src="images/portfolio/fiction_001.png" />-->
+
+            <!--скрипт для побудови квадратів, які відображають площі-->
+
+
+            <script>
+                d3.select("#rects")
+                    .style("display", "flex")
+                    .style("margin", "100px auto")
+                    .selectAll("div")
+                    .data([1.48, 1.21, 0.72, 0.7])
+                    .enter()
+                    .append("div")
+                    .attr("id", function(d, i) {
+                        return "rect" + i
+                    })
+                    .style("width", function(d) {
+                        return 150 * d + "px"
+                    })
+                    .style("height", function(d) {
+                        return 150 * d + "px"
+                    })
+                    .style("margin-right", "20px")
+
+
+                var tag0 = document.createElement("p");
+                var text0 = document.createTextNode("Не визначено 21940.66 га");
+                tag0.appendChild(text0);
+                var element0 = document.getElementById("rect0");
+                element0.appendChild(tag0);
+
+                var tag1 = document.createElement("p");
+                var text1 = document.createTextNode("Комунальна власність 14809.41 га");
+                tag1.appendChild(text1);
+                var element1 = document.getElementById("rect1");
+                element1.appendChild(tag1);
+
+
+                var tag2 = document.createElement("p");
+                var text2 = document.createTextNode("Приватна власність	5263.71 га");
+                tag2.appendChild(text2);
+                var element2 = document.getElementById("rect2");
+                element2.appendChild(tag2);
+
+
+                var tag3 = document.createElement("p");
+                var text3 = document.createTextNode("Державна власність	4991.20 га");
+                tag3.appendChild(text3);
+                var element3 = document.getElementById("rect3");
+                element3.appendChild(tag3);
+            </script>
+            <script>
+                document.getElementById('tree-button').addEventListener('change', function() {
+                    var option = this.value;
+                    console.log(option)
+                    up_image(option)
+                });
+            </script>
+            <script>
+                function up_image(option) {
+                    console.log(option)
+                    var fullCoverImage = document.getElementById("image_1")
+                    fullCoverImage.setAttribute("src", option);
+                    console.log(option)
+                }
+            </script>
             <script src="scripts/parcels_owner_using.js"></script>
             <script src="scripts/map.js"></script>
-            <script src="scripts/rects.js"></script>
             <script>
                 var coll = document.getElementsByClassName("how-to-bar");
                 var i;

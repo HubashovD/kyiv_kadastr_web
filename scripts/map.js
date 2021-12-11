@@ -91,7 +91,7 @@ map.on('load', function() {
         if (map.getZoom() > 12) {
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML("<b>" + e.features[0].properties.ownership + "</b>" + "<br>" + e.features[0].properties.cadnum + "<br>" + e.features[0].properties.category + "<br><b>" + e.features[0].properties.area + " га")
+                .setHTML("<b>" + e.features[0].properties.ownership + "</b>" + "<br>" + e.features[0].properties.cadnum + "<br>" + e.features[0].properties.category + "<br><b>" + e.features[0].properties.area + " га" + "<br>" + e.features[0].properties.ppoint)
                 .addTo(map);
         }
     });
