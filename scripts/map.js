@@ -98,12 +98,9 @@ map.on('load', function() {
         ]);
     }
 
-    var comm_rent = function(value) {
-        console.log(value)
-        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'ownership'],
-            value, 1.0, 0.2
-        ]);
-        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'rent-rent'], "rent", 1.0, 0.0]);
+    var comm_rent = function(selected_value) {
+        console.log(selected_value)
+        map.setPaintProperty("schools_data", 'fill-opacity', ['match', ['get', 'rent-rent_rent'], "rent", 1.0, 0.2]);
     }
 
 
@@ -118,7 +115,7 @@ map.on('load', function() {
         if (map.getZoom() > 12) {
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML("<b>" + e.features[0].properties.ownership + "</b>" + "<br>" + e.features[0].properties.cadnum + "<br>" + e.features[0].properties.category + "<br><b>" + e.features[0].properties.area + " га" + "<br>" + e.features[0].properties.ppoint)
+                .setHTML("<b>" + e.features[0].properties.ownership + "</b>" + "<br>" + e.features[0].properties.cadnum + "<br>" + e.features[0].properties.category + "<br><b>" + e.features[0].properties.area + " га")
                 .addTo(map);
         }
     });
