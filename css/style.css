@@ -213,21 +213,6 @@
         background: lightgrey;
     }
     
-    #change_op {
-        padding: 9px 11px 7px 11px;
-        font: 16px nyt-franklin, sans-serif;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        display: inline-block;
-        cursor: pointer;
-        background: #fff;
-        margin: 0 0.25em;
-    }
-    
-    #change_op:hover {
-        background: lightgrey;
-    }
-    
     .map_grid {
         display: grid;
         grid-template-columns: repeat(3fr, 1fr);
@@ -386,4 +371,45 @@
         color: black;
         text-align: center;
         font-family: 'Montserrat';
+    }
+    
+    #comm_rent {
+        padding: 9px 11px 7px 11px;
+        font: 14px 'Montserrat', sans-serif;
+        background-color: rgb(255, 253, 238);
+        border-radius: 5px;
+        border-color: black;
+        cursor: pointer;
+        width: 15vw;
+        height: 3vh;
+        margin: 0 0.25em;
+    }
+    
+    #comm_rent:hover {
+        background: lightgrey;
+    }
+    
+    #change_op {
+        padding: 9px 11px 7px 11px;
+        font: 14px 'Montserrat', sans-serif;
+        background-color: rgb(255, 253, 238);
+        border-radius: 5px;
+        border-color: black;
+        cursor: pointer;
+        width: 15vw;
+        height: 3vh;
+        margin: 0 0.25em;
+    }
+    
+    #change_op:hover {
+        background: lightgrey;
+    }
+    
+    .third-title {
+        background-color: rgb(162, 89, 95);
+        max-width: 60vw;
+        margin-left: 12.5vw;
+        font: 20px 'Montserrat', sans-serif;
+        font-weight: 700;
+        margin-bottom: 3vh;
     }
