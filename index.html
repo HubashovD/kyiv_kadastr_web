@@ -128,6 +128,9 @@
             </p>
             <div class="map_grid">
                 <div class="box1">
+                    <div class="disclaimer">
+                        <p>Через велику кількість обєктів на карті на великих зумах дані можуть агрегуватись (об'єднувати невеликі ділянки у великі), використовувати неточні кольори для отримання точної інформації використовуйте максимальний зум</p>
+                    </div>
                     <div id='map'></div>
                 </div>
                 <div class="box2">
@@ -233,6 +236,10 @@
                     Гірша ситуація із обліком використанням земельних ділянок. Відповідно до нормативних актів, які затверджують ведення державного земельного кадастру ми маємо аж три графи, які мають уточнювати цільове призначення земельних ділянок: Категорія земель за
                     основним цільовим призначенням, та Назва цільового призначення земельної ділянки згідно з документацією із землеустрою та опис безпосереднього використання.
                 </p>
+                <p>
+                    І якщо із категорією земель все більш менш клалось - таких категорій всього 10, то от із назвою цільового призначення, щось пішло не так. Ці дані майже неможливо унормувати, і це інше, величезне питання, до реєстраторів і тих, хто взагалі вносить ці дані
+                    до державного земельного кадастру. Тому, хоч ми і знаємо у “якому напрямку” використовується земля, але точно це встановити неможливо.
+                </p>
             </article>
             <div>
                 <select id="tree-button">
@@ -246,7 +253,63 @@
             <div>
                 <img id="image_1" src="pic/all.svg">
             </div>
-            <!-- <script>
+            <article class="usual-text">
+                <p>Серед “існуючих” земельних ділянок найбільша площа відведена під землі житлової та громадської забудови - 12 тисяч гектар, другою категорією ідуть ліси - 11 тисяч гектар. Саме таке співвідношення дозволяє стверджувати, що де-юре Київ -
+                    одне із найзеленіших міст світу, а зважаючи на те, що значна частина “не виділених” земельних ділянок - це територія лісів, це співвідношення ще більше.
+                </p>
+                <p>
+                    Також поза увагою залишились майже 3 тисячі гектар Комунальної та Державної власності, використання цих територій із кадастру - невідоме.
+                </p>
+            </article>
+            <p class="third-title">
+                Близько 25% площі земельних ділянок комунальної власності передані в оренду.
+            </p>
+            <article class="usual-text">
+                <p>В місті Києві за даними Державного геокадастру перебуває більше 11 тисяч ділянок комунальної власності. Із них близько 3600 ділянок - передані в оренду. Але і тут треба зробити обмовку. За даними Департаменту земельних відносин КМДА, деякі
+                    ділянки перебувають у комунальній власності, натомість за даними держгеокадастру ці ж ділянки у власності державній. Ци пояснюються розбіжності у візуалізації та цифрах.
+                </p>
+                <p>
+                    Загалом в оренді перебуває 3762 гектар комунальних земель, близько чверті від комунальної землі.
+                </p>
+                <p>
+                    Це і великі земельні ділянки, наприклад Бортницька станція Аерації, територія житлового масиву “Квітництво” - біля Берківців. Що цікаво, що багато новобудов, саме на орендованих земельних ділянках: ЖК “Lucky land”, ЖК “Welcome home”, “Французький квартал
+                    2”, і навіть Taryan Towers.
+                </p>
+                <p>
+                    Також на орендованій території знаходяться і інші великі об’єкти, наприклад Lavina mall. Це, насправді нормальна практика, коли житлові чи громадські будівлі знаходяться на землях територіальної громади. Земля під більшістю житлових будинків - комунальна
+                    власність. Але громадськості та працівникам КМДА варто пильно слідкувати за тим, щоб ці землі не були виведені у приватну власність, адже вони складають значну частину комунального “земельного банку”,а земля в Києві дорожчає із кожним
+                    роком.
+                </p>
+                <p>
+                    Стан в якому перебуває Публічна кадастрова карта та державний земельний кадастр викликають занепокоєння. КМДА, фактично не відповідає за “всю землю в місті”, як вважає громадська думка, і велика частина територій знаходиться у приватній чи державній власності,
+                    а от і велика частина земель - знаходиться “поза радаром”, що створює значні корупційні ризики.
+                </p>
+                <p>
+                    В нашому проекті ми не знайшли “срібну кулю” чи “велику зраду”, а лише намагались по іншому подати дані публічної кадастрової карти, такий собі погляд з гори, давши можливість проаналізувати дані у розрізі форми власності та цільового призначення - те,
+                    чого не дає Публічна кадастрова карта.
+                </p>
+            </article>
+            <p class="third-title">
+                Дисклеймер
+            </p>
+            <article class="usual-text">
+                <p>Проект побудований на даних Державного земельного кадастру, та даних із Порталу відкритих даних Державного земельного кадастру (https://data.land.gov.ua/), публічної кадастрової карти. Розбіжності між кількістю земельних ділянок які знаходяться
+                    на публічній кадастровій карті та на Порталі відкритих даних Держгеокадастру складають близько 10 тисяч в обидві сторони. Для побудови візуалізації були використані об’єднані дані із обох джерел.
+                </p>
+                <p>
+                    Також під час аналізу даних були знайдені неточності у формі власності зокрема частина ділянок відповідно до реєстру земельних ділянок комунальної власності, які передані в оренду знаходиться у комунальній власності, хоча за даними Держгеокадастру ці
+                    ділянки перебувають у власності державній.
+                </p>
+                <p>
+                    Також занепокоєння викликає відсутність у Держгеокадастру інформації про фактичних власників земельних ділянок, загальною площею більше 21 тисячі гектар - ще більше те що це цінні території біля води (київські острови), або ліси. Також існують розбіжності
+                    у даних КП “Київзеленбуд” та держгеокадастру щодо даних лісового господарства.
+                </p>
+                <p>
+                    Загальна рекомендація полягає в тому, що Держгеокадастру треба проводити більш детальний аналіз власної бази даних, оскільки фрагментованість цих даних часто не дозволяє робити однозначні висновки.
+                </p>
+            </article>
+        </div>
+        <!-- <script>
                 function swapImage(aTag) {
                     var fullCoverImage = document.getElementById("full_cover");
                     var linkedImage = aTag.childNodes[0];
@@ -261,89 +324,89 @@
 
             <img id="full_cover" src="images/portfolio/fiction_001.png" />-->
 
-            <!--скрипт для побудови квадратів, які відображають площі-->
+        <!--скрипт для побудови квадратів, які відображають площі-->
 
 
-            <script>
-                d3.select("#rects")
-                    .style("display", "flex")
-                    .style("margin", "100px auto")
-                    .selectAll("div")
-                    .data([2.19, 1.48, 0.52, 0.38])
-                    .enter()
-                    .append("div")
-                    .attr("id", function(d, i) {
-                        return "rect" + i
-                    })
-                    .style("width", function(d) {
-                        return 150 * d + "px"
-                    })
-                    .style("height", function(d) {
-                        return 150 * d + "px"
-                    })
-                    .style("margin-right", "20px")
+        <script>
+            d3.select("#rects")
+                .style("display", "flex")
+                .style("margin", "auto 12.5vw")
+                .selectAll("div")
+                .data([2.19, 1.48, 0.52, 0.38])
+                .enter()
+                .append("div")
+                .attr("id", function(d, i) {
+                    return "rect" + i
+                })
+                .style("width", function(d) {
+                    return 150 * d + "px"
+                })
+                .style("height", function(d) {
+                    return 150 * d + "px"
+                })
+                .style("margin-right", "20px")
 
 
-                var tag0 = document.createElement("p");
-                var text0 = document.createTextNode("Не визначено 21940.66 га");
-                tag0.appendChild(text0);
-                var element0 = document.getElementById("rect0");
-                element0.appendChild(tag0);
+            var tag0 = document.createElement("p");
+            var text0 = document.createTextNode("Не визначено 21940.66 га");
+            tag0.appendChild(text0);
+            var element0 = document.getElementById("rect0");
+            element0.appendChild(tag0);
 
-                var tag1 = document.createElement("p");
-                var text1 = document.createTextNode("Комунальна власність 14809.41 га");
-                tag1.appendChild(text1);
-                var element1 = document.getElementById("rect1");
-                element1.appendChild(tag1);
-
-
-                var tag2 = document.createElement("p");
-                var text2 = document.createTextNode("Приватна власність	5209.95 га");
-                tag2.appendChild(text2);
-                var element2 = document.getElementById("rect2");
-                element2.appendChild(tag2);
+            var tag1 = document.createElement("p");
+            var text1 = document.createTextNode("Комунальна власність 14809.41 га");
+            tag1.appendChild(text1);
+            var element1 = document.getElementById("rect1");
+            element1.appendChild(tag1);
 
 
-                var tag3 = document.createElement("p");
-                var text3 = document.createTextNode("Державна власність	3846.19 га");
-                tag3.appendChild(text3);
-                var element3 = document.getElementById("rect3");
-                element3.appendChild(tag3);
-            </script>
-            <script>
-                document.getElementById('tree-button').addEventListener('change', function() {
-                    var option = this.value;
-                    console.log(option)
-                    up_image(option)
+            var tag2 = document.createElement("p");
+            var text2 = document.createTextNode("Приватна власність	5209.95 га");
+            tag2.appendChild(text2);
+            var element2 = document.getElementById("rect2");
+            element2.appendChild(tag2);
+
+
+            var tag3 = document.createElement("p");
+            var text3 = document.createTextNode("Державна власність	3846.19 га");
+            tag3.appendChild(text3);
+            var element3 = document.getElementById("rect3");
+            element3.appendChild(tag3);
+        </script>
+        <script>
+            document.getElementById('tree-button').addEventListener('change', function() {
+                var option = this.value;
+                console.log(option)
+                up_image(option)
+            });
+        </script>
+        <script>
+            function up_image(option) {
+                console.log(option)
+                var fullCoverImage = document.getElementById("image_1")
+                fullCoverImage.setAttribute("src", option);
+                console.log(option)
+            }
+        </script>
+        <script src="scripts/parcels_owner_using.js"></script>
+        <script src="scripts/map.js"></script>
+        <script>
+            var coll = document.getElementsByClassName("how-to-bar");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
                 });
-            </script>
-            <script>
-                function up_image(option) {
-                    console.log(option)
-                    var fullCoverImage = document.getElementById("image_1")
-                    fullCoverImage.setAttribute("src", option);
-                    console.log(option)
-                }
-            </script>
-            <script src="scripts/parcels_owner_using.js"></script>
-            <script src="scripts/map.js"></script>
-            <script>
-                var coll = document.getElementsByClassName("how-to-bar");
-                var i;
-
-                for (i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function() {
-                        this.classList.toggle("active");
-                        var content = this.nextElementSibling;
-                        if (content.style.maxHeight) {
-                            content.style.maxHeight = null;
-                        } else {
-                            content.style.maxHeight = content.scrollHeight + "px";
-                        }
-                    });
-                }
-            </script>
-        </div>
+            }
+        </script>
+    </div>
     </div>
 </body>
 

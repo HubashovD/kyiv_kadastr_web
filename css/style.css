@@ -92,7 +92,7 @@
     }
     
     #main-title {
-        margin-top: 10%;
+        margin-top: 5%;
         width: 100%;
         font-weight: 900;
         position: absolute;
@@ -198,6 +198,13 @@
         width: 70vw;
         height: 700px;
         margin-right: 1vw;
+    }
+    
+    .disclaimer {
+        font-size: 14px;
+        font: "Montserrat";
+        color: gray;
+        font-weight: 400;
     }
     
     .map_button {
