@@ -413,10 +413,10 @@
     }
     
     .third-title {
-        background-color: rgb(162, 89, 95);
+        color: rgb(162, 89, 95);
         max-width: 60vw;
         margin-left: 12.5vw;
-        font: 20px 'Montserrat', sans-serif;
-        font-weight: 700;
+        font: 24px 'Montserrat', sans-serif;
+        font-weight: 900;
         margin-bottom: 3vh;
     }
